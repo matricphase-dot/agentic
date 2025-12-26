@@ -1,0 +1,33 @@
+{
+  "session_id": "phase4_test_session",
+  "workflow_name": "Phase 4 Test Workflow",
+  "description": "Testing the no-code teaching interface",
+  "started_at": "2025-12-19T00:30:00",
+  "actions": [
+    {
+      "action_id": "action_1",
+      "type": "web_research",
+      "data": {
+        "description": "Research package information",
+        "url": "https://pypi.org/pypi/{package}/json",
+        "method": "GET"
+      }
+    },
+    {
+      "action_id": "action_2",
+      "type": "data_processing",
+      "data": {
+        "description": "Process the response data",
+        "operation": "extract_version",
+        "field": "version"
+      }
+    }
+  ],
+  "parameters": {
+    "package": {
+      "type": "string",
+      "description": "Package name to check",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,1365 @@
+{
+  "timestamp": "2025-12-25T12:54:59",
+  "cwd": "D:\\agentic-core",
+  "python": {
+    "executable": "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "version": "3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]"
+  },
+  "env_summary": {
+    "SMTP_HOST_set": true,
+    "SMTP_PORT_set": true,
+    "SMTP_USER_set": true,
+    "SMTP_PASS_set": true,
+    "ALERT_TO_EMAIL_set": true,
+    "SMTP_USER_masked": "ph***@gmail.com",
+    "ALERT_TO_EMAIL_masked": "te***@gmail.com"
+  },
+  "project_tree": {
+    "root": "D:\\agentic-core",
+    "file_count_listed": 250,
+    "files": [
+      {
+        "path": ".env",
+        "bytes": 284,
+        "modified": "2025-12-18T22:45:03"
+      },
+      {
+        "path": ".env.example",
+        "bytes": 468,
+        "modified": "2025-12-19T16:46:48"
+      },
+      {
+        "path": ".gitignore",
+        "bytes": 48,
+        "modified": "2025-12-19T16:18:43"
+      },
+      {
+        "path": "0.21.0",
+        "bytes": 0,
+        "modified": "2025-12-21T00:05:10"
+      },
+      {
+        "path": "0.3.0",
+        "bytes": 0,
+        "modified": "2025-12-21T00:05:10"
+      },
+      {
+        "path": "0.4.18",
+        "bytes": 0,
+        "modified": "2025-12-21T00:05:10"
+      },
+      {
+        "path": "1.0.0",
+        "bytes": 0,
+        "modified": "2025-12-21T00:05:10"
+      },
+      {
+        "path": "1.35.0",
+        "bytes": 0,
+        "modified": "2025-12-21T00:05:10"
+      },
+      {
+        "path": "1.6.3",
+        "bytes": 0,
+        "modified": "2025-12-21T00:05:10"
+      },
+      {
+        "path": "1.7.5",
+        "bytes": 0,
+        "modified": "2025-12-21T00:05:10"
+      },
+      {
+        "path": "2.17.0",
+        "bytes": 0,
+        "modified": "2025-12-21T00:05:10"
+      },
+      {
+        "path": "2.28.0",
+        "bytes": 0,
+        "modified": "2025-12-21T00:05:10"
+      },
+      {
+        "path": "4.10.0",
+        "bytes": 0,
+        "modified": "2025-12-21T00:05:10"
+      },
+      {
+        "path": "4.11.0",
+        "bytes": 0,
+        "modified": "2025-12-21T00:05:10"
+      },
+      {
+        "path": "4.9.0",
+        "bytes": 0,
+        "modified": "2025-12-21T00:05:10"
+      },
+      {
+        "path": "5.14.0",
+        "bytes": 0,
+        "modified": "2025-12-21T00:05:10"
+      },
+      {
+        "path": "6.0.0",
+        "bytes": 0,
+        "modified": "2025-12-21T00:05:10"
+      },
+      {
+        "path": "7.4.0",
+        "bytes": 0,
+        "modified": "2025-12-21T00:05:10"
+      },
+      {
+        "path": "List[str]",
+        "bytes": 0,
+        "modified": "2025-12-25T12:35:00"
+      },
+      {
+        "path": "Optional[WorkflowPlan]",
+        "bytes": 0,
+        "modified": "2025-12-18T22:58:36"
+      },
+      {
+        "path": "README.md",
+        "bytes": 1638,
+        "modified": "2025-12-19T16:50:25"
+      },
+      {
+        "path": "Tuple[bool",
+        "bytes": 0,
+        "modified": "2025-12-20T18:26:21"
+      },
+      {
+        "path": "WorkflowPlan",
+        "bytes": 0,
+        "modified": "2025-12-20T18:26:21"
+      },
+      {
+        "path": "add_missing_method.py",
+        "bytes": 3311,
+        "modified": "2025-12-19T17:10:09"
+      },
+      {
+        "path": "agentic-core/new_orchestrator.py",
+        "bytes": 8350,
+        "modified": "2025-12-18T23:57:22"
+      },
+      {
+        "path": "agents/__init__.py",
+        "bytes": 341,
+        "modified": "2025-12-20T19:28:19"
+      },
+      {
+        "path": "agents/cd",
+        "bytes": 0,
+        "modified": "2025-12-21T15:41:29"
+      },
+      {
+        "path": "agents/coder.py",
+        "bytes": 31271,
+        "modified": "2025-12-20T23:55:15"
+      },
+      {
+        "path": "agents/coder_ascii.py",
+        "bytes": 6382,
+        "modified": "2025-12-21T15:51:40"
+      },
+      {
+        "path": "agents/coder_fixed.py",
+        "bytes": 20107,
+        "modified": "2025-12-21T00:06:38"
+      },
+      {
+        "path": "agents/coder_simple.py",
+        "bytes": 390,
+        "modified": "2025-12-21T15:45:08"
+      },
+      {
+        "path": "agents/coder_standalone.py",
+        "bytes": 20665,
+        "modified": "2025-12-21T00:19:30"
+      },
+      {
+        "path": "agents/coder_windows.py",
+        "bytes": 13969,
+        "modified": "2025-12-21T00:25:40"
+      },
+      {
+        "path": "agents/enhanced_orchestrator.py",
+        "bytes": 28590,
+        "modified": "2025-12-18T23:30:46"
+      },
+      {
+        "path": "agents/enhanced_qa.py",
+        "bytes": 7215,
+        "modified": "2025-12-19T00:22:22"
+      },
+      {
+        "path": "agents/gemini_planner.py",
+        "bytes": 4592,
+        "modified": "2025-12-18T22:41:14"
+      },
+      {
+        "path": "agents/new_orchestrator.py",
+        "bytes": 4735,
+        "modified": "2025-12-19T00:02:39"
+      },
+      {
+        "path": "agents/orchestrator.py",
+        "bytes": 20040,
+        "modified": "2025-12-20T01:10:01"
+      },
+      {
+        "path": "agents/orchestrator_ascii.py",
+        "bytes": 9514,
+        "modified": "2025-12-21T15:52:37"
+      },
+      {
+        "path": "agents/orchestrator_enhanced.py",
+        "bytes": 21972,
+        "modified": "2025-12-21T19:59:41"
+      },
+      {
+        "path": "agents/orchestrator_fixed.py",
+        "bytes": 9747,
+        "modified": "2025-12-21T15:03:20"
+      },
+      {
+        "path": "agents/orchestrator_simple.py",
+        "bytes": 771,
+        "modified": "2025-12-21T15:08:42"
+      },
+      {
+        "path": "agents/orchestrator_updated.py",
+        "bytes": 21524,
+        "modified": "2025-12-21T13:00:03"
+      },
+      {
+        "path": "agents/orchestrator_v5_3.py",
+        "bytes": 6599,
+        "modified": "2025-12-20T23:41:14"
+      },
+      {
+        "path": "agents/orchestrator_windows.py",
+        "bytes": 20486,
+        "modified": "2025-12-21T01:03:24"
+      },
+      {
+        "path": "agents/planner.py",
+        "bytes": 3266,
+        "modified": "2025-12-20T18:59:27"
+      },
+      {
+        "path": "agents/planner_ascii.py",
+        "bytes": 5801,
+        "modified": "2025-12-21T15:50:46"
+      },
+      {
+        "path": "agents/qa.py",
+        "bytes": 23170,
+        "modified": "2025-12-20T23:56:07"
+      },
+      {
+        "path": "agents/qa_ascii.py",
+        "bytes": 4707,
+        "modified": "2025-12-21T15:52:11"
+      },
+      {
+        "path": "agents/qa_fixed.py",
+        "bytes": 8388,
+        "modified": "2025-12-21T15:02:48"
+      },
+      {
+        "path": "agents/qa_simple.py",
+        "bytes": 279,
+        "modified": "2025-12-21T15:45:08"
+      },
+      {
+        "path": "agents/qa_simple_fixed.py",
+        "bytes": 898,
+        "modified": "2025-12-21T15:16:28"
+      },
+      {
+        "path": "agents/qa_windows.py",
+        "bytes": 19565,
+        "modified": "2025-12-21T01:02:21"
+      },
+      {
+        "path": "agents/researcher.py",
+        "bytes": 4395,
+        "modified": "2025-12-21T13:01:21"
+      },
+      {
+        "path": "agents/researcher_ascii.py",
+        "bytes": 5278,
+        "modified": "2025-12-21T15:51:11"
+      },
+      {
+        "path": "agents/researcher_basic.py",
+        "bytes": 226,
+        "modified": "2025-12-21T15:41:15"
+      },
+      {
+        "path": "agents/researcher_enhanced.py",
+        "bytes": 6145,
+        "modified": "2025-12-21T16:13:32"
+      },
+      {
+        "path": "agents/researcher_minimal.py",
+        "bytes": 6578,
+        "modified": "2025-12-21T19:26:42"
+      },
+      {
+        "path": "agents/researcher_original.py",
+        "bytes": 4510,
+        "modified": "2025-12-20T22:33:27"
+      },
+      {
+        "path": "agents/researcher_simple.py",
+        "bytes": 402,
+        "modified": "2025-12-21T15:45:08"
+      },
+      {
+        "path": "agents/researcher_updated.py",
+        "bytes": 5953,
+        "modified": "2025-12-21T12:59:34"
+      },
+      {
+        "path": "agents/test_agent.py",
+        "bytes": 68,
+        "modified": "2025-12-21T15:43:48"
+      },
+      {
+        "path": "app",
+        "bytes": 0,
+        "modified": "2025-12-25T12:35:00"
+      },
+      {
+        "path": "artifacts/artifact_20251218_171235.json",
+        "bytes": 186,
+        "modified": "2025-12-18T17:12:35"
+      },
+      {
+        "path": "artifacts/code_execution_20251221_010737_347.json",
+        "bytes": 774,
+        "modified": "2025-12-21T01:07:37"
+      },
+      {
+        "path": "artifacts/code_execution_20251221_010738_827.json",
+        "bytes": 868,
+        "modified": "2025-12-21T01:07:38"
+      },
+      {
+        "path": "artifacts/code_execution_20251221_130212_057.json",
+        "bytes": 774,
+        "modified": "2025-12-21T13:02:12"
+      },
+      {
+        "path": "artifacts/code_execution_20251221_130229_283.json",
+        "bytes": 868,
+        "modified": "2025-12-21T13:02:29"
+      },
+      {
+        "path": "artifacts/code_execution_20251221_130230_617.json",
+        "bytes": 774,
+        "modified": "2025-12-21T13:02:30"
+      },
+      {
+        "path": "artifacts/generated_code_20251221_010736_754.json",
+        "bytes": 772,
+        "modified": "2025-12-21T01:07:36"
+      },
+      {
+        "path": "artifacts/generated_code_20251221_010738_471.json",
+        "bytes": 804,
+        "modified": "2025-12-21T01:07:38"
+      },
+      {
+        "path": "artifacts/generated_code_20251221_130211_656.json",
+        "bytes": 747,
+        "modified": "2025-12-21T13:02:11"
+      },
+      {
+        "path": "artifacts/generated_code_20251221_130228_984.json",
+        "bytes": 835,
+        "modified": "2025-12-21T13:02:28"
+      },
+      {
+        "path": "artifacts/generated_code_20251221_130230_346.json",
+        "bytes": 781,
+        "modified": "2025-12-21T13:02:30"
+      },
+      {
+        "path": "bool",
+        "bytes": 0,
+        "modified": "2025-12-18T22:58:39"
+      },
+      {
+        "path": "cd",
+        "bytes": 0,
+        "modified": "2025-12-21T15:36:33"
+      },
+      {
+        "path": "check_classes.py",
+        "bytes": 0,
+        "modified": "2025-12-20T01:13:17"
+      },
+      {
+        "path": "check_classes_fixed.py",
+        "bytes": 4915,
+        "modified": "2025-12-20T01:14:50"
+      },
+      {
+        "path": "check_compatibility.py",
+        "bytes": 3557,
+        "modified": "2025-12-21T00:13:49"
+      },
+      {
+        "path": "check_orchestrator.py",
+        "bytes": 1031,
+        "modified": "2025-12-19T18:47:36"
+      },
+      {
+        "path": "check_step_types.py",
+        "bytes": 1471,
+        "modified": "2025-12-19T22:00:52"
+      },
+      {
+        "path": "check_system.py",
+        "bytes": 2732,
+        "modified": "2025-12-21T01:05:03"
+      },
+      {
+        "path": "check_web.py",
+        "bytes": 1844,
+        "modified": "2025-12-21T23:24:06"
+      },
+      {
+        "path": "cleanup_fix.py",
+        "bytes": 4245,
+        "modified": "2025-12-20T19:28:03"
+      },
+      {
+        "path": "cli_teacher.py",
+        "bytes": 12949,
+        "modified": "2025-12-19T15:33:32"
+      },
+      {
+        "path": "complete_fix.py",
+        "bytes": 6261,
+        "modified": "2025-12-19T16:18:33"
+      },
+      {
+        "path": "complete_phase2.py",
+        "bytes": 15717,
+        "modified": "2025-12-21T19:42:34"
+      },
+      {
+        "path": "complete_week78.py",
+        "bytes": 69549,
+        "modified": "2025-12-21T20:12:51"
+      },
+      {
+        "path": "complete_week78_fixed.py",
+        "bytes": 36719,
+        "modified": "2025-12-21T20:54:14"
+      },
+      {
+        "path": "comprehensive_fix.py",
+        "bytes": 1385,
+        "modified": "2025-12-19T22:02:57"
+      },
+      {
+        "path": "create_and_test.py",
+        "bytes": 4934,
+        "modified": "2025-12-21T20:56:32"
+      },
+      {
+        "path": "create_clean_orchestrator.py",
+        "bytes": 12740,
+        "modified": "2025-12-19T23:42:19"
+      },
+      {
+        "path": "create_clean_planner.py",
+        "bytes": 15389,
+        "modified": "2025-12-19T22:10:26"
+      },
+      {
+        "path": "create_clean_setup.py",
+        "bytes": 2320,
+        "modified": "2025-12-18T21:47:33"
+      },
+      {
+        "path": "create_web_files.py",
+        "bytes": 6066,
+        "modified": "2025-12-21T22:51:57"
+      },
+      {
+        "path": "demo.py",
+        "bytes": 5136,
+        "modified": "2025-12-18T19:48:20"
+      },
+      {
+        "path": "demo_fixed.py",
+        "bytes": 7983,
+        "modified": "2025-12-18T20:07:18"
+      },
+      {
+        "path": "demo_phase4.py",
+        "bytes": 3332,
+        "modified": "2025-12-19T15:46:19"
+      },
+      {
+        "path": "demo_phase5_3.py",
+        "bytes": 5780,
+        "modified": "2025-12-19T21:54:20"
+      },
+      {
+        "path": "demo_researcher.py",
+        "bytes": 3035,
+        "modified": "2025-12-19T21:45:26"
+      },
+      {
+        "path": "demo_tool_catalog.json",
+        "bytes": 6894,
+        "modified": "2025-12-19T21:56:14"
+      },
+      {
+        "path": "diagnose_enum.py",
+        "bytes": 2353,
+        "modified": "2025-12-19T22:11:26"
+      },
+      {
+        "path": "diagnostic.py",
+        "bytes": 2305,
+        "modified": "2025-12-18T20:15:20"
+      },
+      {
+        "path": "diagnostic_imports.py",
+        "bytes": 1661,
+        "modified": "2025-12-19T19:07:46"
+      },
+      {
+        "path": "dict",
+        "bytes": 0,
+        "modified": "2025-12-25T12:35:01"
+      },
+      {
+        "path": "echo",
+        "bytes": 0,
+        "modified": "2025-12-21T15:18:01"
+      },
+      {
+        "path": "enhanced_orchestrator.py",
+        "bytes": 12137,
+        "modified": "2025-12-18T23:45:11"
+      },
+      {
+        "path": "examples/enhanced_verification_example.py",
+        "bytes": 2473,
+        "modified": "2025-12-21T21:42:12"
+      },
+      {
+        "path": "execution/__init__.py",
+        "bytes": 20,
+        "modified": "2025-12-19T16:46:48"
+      },
+      {
+        "path": "final_fix.py",
+        "bytes": 2440,
+        "modified": "2025-12-19T22:11:57"
+      },
+      {
+        "path": "fix_agents_init.py",
+        "bytes": 783,
+        "modified": "2025-12-18T21:50:22"
+      },
+      {
+        "path": "fix_all_agents.py",
+        "bytes": 1064,
+        "modified": "2025-12-18T21:54:42"
+      },
+      {
+        "path": "fix_all_production_issues.py",
+        "bytes": 20219,
+        "modified": "2025-12-19T16:10:05"
+      },
+      {
+        "path": "fix_duplicate_enum.py",
+        "bytes": 2411,
+        "modified": "2025-12-19T22:09:10"
+      },
+      {
+        "path": "fix_duration_issue.py",
+        "bytes": 4178,
+        "modified": "2025-12-19T20:13:24"
+      },
+      {
+        "path": "fix_encoding.py",
+        "bytes": 498,
+        "modified": "2025-12-19T17:04:59"
+      },
+      {
+        "path": "fix_import_issues.py",
+        "bytes": 2694,
+        "modified": "2025-12-19T18:52:03"
+      },
+      {
+        "path": "fix_imports.py",
+        "bytes": 5080,
+        "modified": "2025-12-18T22:17:30"
+      },
+      {
+        "path": "fix_indentation.py",
+        "bytes": 922,
+        "modified": "2025-12-19T17:07:49"
+      },
+      {
+        "path": "fix_orchestrator.py",
+        "bytes": 12138,
+        "modified": "2025-12-20T17:38:04"
+      },
+      {
+        "path": "fix_phase3.py",
+        "bytes": 11867,
+        "modified": "2025-12-18T22:50:57"
+      },
+      {
+        "path": "fix_phase4.py",
+        "bytes": 20131,
+        "modified": "2025-12-19T16:04:33"
+      },
+      {
+        "path": "fix_phase5.py",
+        "bytes": 8995,
+        "modified": "2025-12-20T18:59:13"
+      },
+      {
+        "path": "fix_phase5_3.bat",
+        "bytes": 1497,
+        "modified": "2025-12-19T22:01:53"
+      },
+      {
+        "path": "fix_phase5_3_issues.py",
+        "bytes": 5974,
+        "modified": "2025-12-19T23:35:02"
+      },
+      {
+        "path": "fix_phase5_duration.py",
+        "bytes": 3853,
+        "modified": "2025-12-20T19:37:20"
+      },
+      {
+        "path": "fix_phase6.py",
+        "bytes": 8033,
+        "modified": "2025-12-20T23:40:59"
+      },
+      {
+        "path": "fix_production_issues.py",
+        "bytes": 35989,
+        "modified": "2025-12-19T15:59:59"
+      },
+      {
+        "path": "fix_remaining_issues.py",
+        "bytes": 6745,
+        "modified": "2025-12-19T16:46:29"
+      },
+      {
+        "path": "fix_researcher_issue.py",
+        "bytes": 8136,
+        "modified": "2025-12-21T13:01:08"
+      },
+      {
+        "path": "fix_setup.py",
+        "bytes": 23673,
+        "modified": "2025-12-18T19:11:15"
+      },
+      {
+        "path": "fix_step_description.py",
+        "bytes": 561,
+        "modified": "2025-12-19T21:33:57"
+      },
+      {
+        "path": "fix_syntax.py",
+        "bytes": 4117,
+        "modified": "2025-12-20T19:11:05"
+      },
+      {
+        "path": "fix_syntax_error.py",
+        "bytes": 1084,
+        "modified": "2025-12-19T23:40:24"
+      },
+      {
+        "path": "fix_test.py",
+        "bytes": 509,
+        "modified": "2025-12-19T21:21:45"
+      },
+      {
+        "path": "fix_test_issue.py",
+        "bytes": 2333,
+        "modified": "2025-12-21T22:18:36"
+      },
+      {
+        "path": "fix_unicode_issue.py",
+        "bytes": 7860,
+        "modified": "2025-12-21T15:08:22"
+      },
+      {
+        "path": "fix_verification.py",
+        "bytes": 21875,
+        "modified": "2025-12-21T21:38:31"
+      },
+      {
+        "path": "fix_verification_v2.py",
+        "bytes": 22262,
+        "modified": "2025-12-21T21:41:56"
+      },
+      {
+        "path": "fix_workflowresult.py",
+        "bytes": 2426,
+        "modified": "2025-12-19T20:39:51"
+      },
+      {
+        "path": "fortress/.gitignore",
+        "bytes": 71,
+        "modified": "2025-12-18T16:44:43"
+      },
+      {
+        "path": "fortress/pyvenv.cfg",
+        "bytes": 447,
+        "modified": "2025-12-18T16:44:43"
+      },
+      {
+        "path": "guardrails/evaluation_system.py",
+        "bytes": 14778,
+        "modified": "2025-12-19T17:25:23"
+      },
+      {
+        "path": "install_deps.py",
+        "bytes": 1801,
+        "modified": "2025-12-21T15:12:57"
+      },
+      {
+        "path": "install_minimal.bat",
+        "bytes": 317,
+        "modified": "2025-12-21T15:49:52"
+      },
+      {
+        "path": "list[dict]",
+        "bytes": 0,
+        "modified": "2025-12-25T12:35:01"
+      },
+      {
+        "path": "main.py",
+        "bytes": 4762,
+        "modified": "2025-12-20T17:40:04"
+      },
+      {
+        "path": "memory/__init__.py",
+        "bytes": 74,
+        "modified": "2025-12-19T16:18:43"
+      },
+      {
+        "path": "memory/_init_.py",
+        "bytes": 63,
+        "modified": "2025-12-19T00:20:42"
+      },
+      {
+        "path": "memory/artifact_store.py",
+        "bytes": 180,
+        "modified": "2025-12-19T16:18:43"
+      },
+      {
+        "path": "memory/graph_db.json",
+        "bytes": 4266,
+        "modified": "2025-12-19T00:23:53"
+      },
+      {
+        "path": "memory/graph_memory.py",
+        "bytes": 8725,
+        "modified": "2025-12-19T00:21:29"
+      },
+      {
+        "path": "minimal_test.py",
+        "bytes": 1238,
+        "modified": "2025-12-20T19:30:05"
+      },
+      {
+        "path": "mkdir",
+        "bytes": 0,
+        "modified": "2025-12-21T16:14:14"
+      },
+      {
+        "path": "monitoring/dashboard.py",
+        "bytes": 4167,
+        "modified": "2025-12-19T18:42:27"
+      },
+      {
+        "path": "monitoring/telemetry_system.py",
+        "bytes": 9283,
+        "modified": "2025-12-19T17:24:24"
+      },
+      {
+        "path": "new_orchestrator.py",
+        "bytes": 12332,
+        "modified": "2025-12-18T23:52:58"
+      },
+      {
+        "path": "orchestrator.py .txt",
+        "bytes": 9171,
+        "modified": "2025-12-18T17:20:03"
+      },
+      {
+        "path": "orchestrator_v5_3.py",
+        "bytes": 12423,
+        "modified": "2025-12-19T23:41:38"
+      },
+      {
+        "path": "phase3_test.py",
+        "bytes": 2793,
+        "modified": "2025-12-19T00:11:52"
+      },
+      {
+        "path": "phase8_test_report.json",
+        "bytes": 216,
+        "modified": "2025-12-21T01:07:38"
+      },
+      {
+        "path": "planner.py",
+        "bytes": 18612,
+        "modified": "2025-12-18T22:56:36"
+      },
+      {
+        "path": "planner_agent.py",
+        "bytes": 9079,
+        "modified": "2025-12-18T17:15:20"
+      },
+      {
+        "path": "production_checklist.py",
+        "bytes": 10907,
+        "modified": "2025-12-19T17:17:24"
+      },
+      {
+        "path": "production_readiness_report.json",
+        "bytes": 487,
+        "modified": "2025-12-19T17:13:19"
+      },
+      {
+        "path": "python",
+        "bytes": 0,
+        "modified": "2025-12-21T15:04:44"
+      },
+      {
+        "path": "qa_agent.py",
+        "bytes": 7231,
+        "modified": "2025-12-18T17:19:26"
+      },
+      {
+        "path": "quick_fix.py",
+        "bytes": 3998,
+        "modified": "2025-12-19T16:14:31"
+      },
+      {
+        "path": "quick_fix_all.py",
+        "bytes": 3968,
+        "modified": "2025-12-21T15:18:55"
+      },
+      {
+        "path": "quick_fix_ascii.py",
+        "bytes": 4597,
+        "modified": "2025-12-21T15:44:37"
+      },
+      {
+        "path": "quick_setup.py",
+        "bytes": 3944,
+        "modified": "2025-12-18T21:47:03"
+      },
+      {
+        "path": "quick_test.py",
+        "bytes": 1602,
+        "modified": "2025-12-19T16:19:45"
+      },
+      {
+        "path": "quick_verify.py",
+        "bytes": 1540,
+        "modified": "2025-12-19T17:14:01"
+      },
+      {
+        "path": "replace_checklist.py",
+        "bytes": 9621,
+        "modified": "2025-12-19T17:12:47"
+      },
+      {
+        "path": "requirements.txt",
+        "bytes": 714,
+        "modified": "2025-12-21T00:06:05"
+      },
+      {
+        "path": "requirements_minimal.txt",
+        "bytes": 211,
+        "modified": "2025-12-21T00:14:43"
+      },
+      {
+        "path": "requirements_phase5.3.txt",
+        "bytes": 47,
+        "modified": "2025-12-19T21:55:01"
+      },
+      {
+        "path": "requirements_researcher.txt",
+        "bytes": 190,
+        "modified": "2025-12-19T21:44:17"
+      },
+      {
+        "path": "requirements_simple.txt",
+        "bytes": 382,
+        "modified": "2025-12-21T15:12:30"
+      },
+      {
+        "path": "research_results.json",
+        "bytes": 236,
+        "modified": "2025-12-19T21:46:44"
+      },
+      {
+        "path": "researcher_agent.py",
+        "bytes": 6896,
+        "modified": "2025-12-18T17:18:49"
+      },
+      {
+        "path": "researcher_basic.py",
+        "bytes": 0,
+        "modified": "2025-12-21T15:36:33"
+      },
+      {
+        "path": "researcher_tools.json",
+        "bytes": 1174,
+        "modified": "2025-12-19T21:46:46"
+      },
+      {
+        "path": "restore.bat",
+        "bytes": 381,
+        "modified": "2025-12-21T15:00:05"
+      },
+      {
+        "path": "restore_planner.py",
+        "bytes": 15899,
+        "modified": "2025-12-19T22:16:37"
+      },
+      {
+        "path": "run_tests.py",
+        "bytes": 2294,
+        "modified": "2025-12-20T17:39:39"
+      },
+      {
+        "path": "run_web.py",
+        "bytes": 775,
+        "modified": "2025-12-21T22:52:13"
+      },
+      {
+        "path": "run_web.py .txt",
+        "bytes": 4223,
+        "modified": "2025-12-21T22:45:46"
+      },
+      {
+        "path": "setup_fixed.bat",
+        "bytes": 837,
+        "modified": "2025-12-21T16:03:32"
+      },
+      {
+        "path": "setup_phase2_complete.py",
+        "bytes": 12458,
+        "modified": "2025-12-21T16:24:24"
+      },
+      {
+        "path": "setup_phase2_minimal.py",
+        "bytes": 5533,
+        "modified": "2025-12-21T19:27:13"
+      },
+      {
+        "path": "setup_phase_25.bat",
+        "bytes": 840,
+        "modified": "2025-12-21T15:54:50"
+      },
+      {
+        "path": "setup_week5.py",
+        "bytes": 2848,
+        "modified": "2025-12-20T19:56:49"
+      },
+      {
+        "path": "setup_week5_final.py",
+        "bytes": 19733,
+        "modified": "2025-12-20T22:33:09"
+      },
+      {
+        "path": "setup_week5_fixed.py",
+        "bytes": 19599,
+        "modified": "2025-12-20T22:24:38"
+      },
+      {
+        "path": "simple_check.py",
+        "bytes": 2345,
+        "modified": "2025-12-20T01:16:21"
+      },
+      {
+        "path": "simple_memory.py",
+        "bytes": 965,
+        "modified": "2025-12-18T17:10:53"
+      },
+      {
+        "path": "simple_test.py",
+        "bytes": 1293,
+        "modified": "2025-12-19T23:44:09"
+      },
+      {
+        "path": "simple_tool.py",
+        "bytes": 454,
+        "modified": "2025-12-18T17:11:44"
+      },
+      {
+        "path": "simple_verifier.py",
+        "bytes": 571,
+        "modified": "2025-12-18T17:11:18"
+      },
+      {
+        "path": "start.py",
+        "bytes": 1094,
+        "modified": "2025-12-21T16:05:55"
+      },
+      {
+        "path": "start_phase2.bat",
+        "bytes": 1097,
+        "modified": "2025-12-21T16:13:59"
+      },
+      {
+        "path": "status_report.json",
+        "bytes": 6629,
+        "modified": "2025-12-25T12:54:29"
+      },
+      {
+        "path": "str",
+        "bytes": 0,
+        "modified": "2025-12-20T18:26:21"
+      },
+      {
+        "path": "taught_workflow_executor.py",
+        "bytes": 8983,
+        "modified": "2025-12-19T15:34:37"
+      },
+      {
+        "path": "teaching/__init__.py",
+        "bytes": 83,
+        "modified": "2025-12-19T16:18:43"
+      },
+      {
+        "path": "teaching/cli_teacher.py",
+        "bytes": 12949,
+        "modified": "2025-12-19T15:35:49"
+      },
+      {
+        "path": "teaching/taught_workflow_executor.py",
+        "bytes": 8983,
+        "modified": "2025-12-19T15:36:32"
+      },
+      {
+        "path": "teaching/workflow_recorder.py",
+        "bytes": 127,
+        "modified": "2025-12-19T16:18:43"
+      },
+      {
+        "path": "test.py",
+        "bytes": 558,
+        "modified": "2025-12-18T23:58:28"
+      },
+      {
+        "path": "test_ascii.py",
+        "bytes": 3883,
+        "modified": "2025-12-21T15:08:42"
+      },
+      {
+        "path": "test_basic_components.py",
+        "bytes": 5438,
+        "modified": "2025-12-20T01:03:17"
+      },
+      {
+        "path": "test_final.py",
+        "bytes": 214,
+        "modified": "2025-12-21T15:38:53"
+      },
+      {
+        "path": "test_fix.py",
+        "bytes": 1550,
+        "modified": "2025-12-19T16:16:07"
+      },
+      {
+        "path": "test_fixed_system_backup.py",
+        "bytes": 12371,
+        "modified": "2025-12-21T15:02:17"
+      },
+      {
+        "path": "test_fixed_system_backup2.py",
+        "bytes": 0,
+        "modified": "2025-12-21T15:04:15"
+      },
+      {
+        "path": "test_imports.py",
+        "bytes": 645,
+        "modified": "2025-12-18T21:51:13"
+      },
+      {
+        "path": "test_orchestrator.py",
+        "bytes": 2794,
+        "modified": "2025-12-21T01:03:57"
+      },
+      {
+        "path": "test_phase3_complete.py",
+        "bytes": 2725,
+        "modified": "2025-12-19T00:23:10"
+      },
+      {
+        "path": "test_phase4_complete.py",
+        "bytes": 6544,
+        "modified": "2025-12-19T00:36:53"
+      },
+      {
+        "path": "test_phase5.1.py",
+        "bytes": 5249,
+        "modified": "2025-12-19T21:32:51"
+      },
+      {
+        "path": "test_phase5.2.py",
+        "bytes": 11219,
+        "modified": "2025-12-19T21:45:04"
+      },
+      {
+        "path": "test_phase5.3.py",
+        "bytes": 12728,
+        "modified": "2025-12-19T23:43:15"
+      },
+      {
+        "path": "test_phase5.py",
+        "bytes": 894,
+        "modified": "2025-12-19T17:26:59"
+      },
+      {
+        "path": "test_phase5_3_fixed.py",
+        "bytes": 7362,
+        "modified": "2025-12-20T17:38:52"
+      },
+      {
+        "path": "test_phase5_3_fixed_v2.py",
+        "bytes": 7489,
+        "modified": "2025-12-20T19:36:32"
+      },
+      {
+        "path": "test_phase6_researcher.py",
+        "bytes": 6423,
+        "modified": "2025-12-20T22:33:27"
+      },
+      {
+        "path": "test_phase6_researcher_fixed.py",
+        "bytes": 8003,
+        "modified": "2025-12-20T23:40:28"
+      },
+      {
+        "path": "test_phase_25.py",
+        "bytes": 6576,
+        "modified": "2025-12-21T15:54:16"
+      },
+      {
+        "path": "test_qa_agent.py",
+        "bytes": 2079,
+        "modified": "2025-12-21T01:02:52"
+      },
+      {
+        "path": "test_run.py",
+        "bytes": 2743,
+        "modified": "2025-12-18T18:14:14"
+      },
+      {
+        "path": "test_simple.py",
+        "bytes": 610,
+        "modified": "2025-12-21T15:45:08"
+      },
+      {
+        "path": "test_simple_import.py",
+        "bytes": 769,
+        "modified": "2025-12-19T19:10:14"
+      },
+      {
+        "path": "test_simple_orchestrator.py",
+        "bytes": 4304,
+        "modified": "2025-12-20T01:03:29"
+      },
+      {
+        "path": "test_tool_registry.json",
+        "bytes": 6132,
+        "modified": "2025-12-19T22:17:28"
+      },
+      {
+        "path": "test_trace_fix.py",
+        "bytes": 1149,
+        "modified": "2025-12-19T21:33:21"
+      },
+      {
+        "path": "test_working.py",
+        "bytes": 7023,
+        "modified": "2025-12-21T15:16:49"
+      },
+      {
+        "path": "tests/integration_test.py",
+        "bytes": 4601,
+        "modified": "2025-12-18T19:43:30"
+      },
+      {
+        "path": "tests/test_enhanced_verification.py",
+        "bytes": 4697,
+        "modified": "2025-12-21T22:18:44"
+      },
+      {
+        "path": "tests/test_phase4.py",
+        "bytes": 5986,
+        "modified": "2025-12-19T15:49:07"
+      },
+      {
+        "path": "tests/test_phase7_coder_qa.py",
+        "bytes": 13137,
+        "modified": "2025-12-20T23:58:34"
+      },
+      {
+        "path": "tests/test_phase8_full.py",
+        "bytes": 6920,
+        "modified": "2025-12-21T01:04:37"
+      },
+      {
+        "path": "tests/test_simple_coder.py",
+        "bytes": 5092,
+        "modified": "2025-12-21T00:07:24"
+      },
+      {
+        "path": "tests/test_ultra_simple.py",
+        "bytes": 10194,
+        "modified": "2025-12-21T00:20:08"
+      },
+      {
+        "path": "tests/test_windows_fixed.py",
+        "bytes": 13856,
+        "modified": "2025-12-21T00:24:11"
+      },
+      {
+        "path": "tool_registry.json",
+        "bytes": 1435,
+        "modified": "2025-12-21T16:14:45"
+      },
+      {
+        "path": "verify_fix.py",
+        "bytes": 1039,
+        "modified": "2025-12-19T16:47:35"
+      },
+      {
+        "path": "verify_phase2.py",
+        "bytes": 4327,
+        "modified": "2025-12-21T19:33:20"
+      },
+      {
+        "path": "workflow_recorder.py",
+        "bytes": 3850,
+        "modified": "2025-12-19T15:32:53"
+      },
+      {
+        "path": "working demo.py",
+        "bytes": 5802,
+        "modified": "2025-12-18T18:03:50"
+      }
+    ],
+    "note": "Limited to 250 files; excludes common env/cache folders."
+  },
+  "automation_registry_guess": {
+    "hits": [
+      {
+        "path": "tools/status_probe.py",
+        "keyword_score": 10,
+        "preview": [
+          "0110: def _guess_automation_registry(root: Path) -> dict:",
+          "0112:     Heuristic search for 'automation type' registries without executing the whole app.",
+          "0113:     Looks for common keywords in .py files: AUTOMATION, registry, types, leads_sheet, etc.",
+          "0116:         \"AUTOMATION\",",
+          "0117:         \"automation_types\",",
+          "0118:         \"AUTOMATION_TYPES\",",
+          "0119:         \"registry\",",
+          "0120:         \"leads_sheet\",",
+          "0122:         \"add_job\",",
+          "0123:         \"apscheduler\",",
+          "0147:                 if any(kw.lower() in line.lower() for kw in [\"automation\", \"registry\", \"leads_sheet\", \"apscheduler\", \"add_job\"]):",
+          "0163:         \"note\": \"Heuristic scan: shows likely files that define automation types/registry/scheduler.\",",
+          "0183:         \"automation_registry_guess\": _guess_automation_registry(root),"
+        ]
+      },
+      {
+        "path": "web/app.py",
+        "keyword_score": 6,
+        "preview": [
+          "0013: from apscheduler.schedulers.background import BackgroundScheduler",
+          "0014: from apscheduler.triggers.interval import IntervalTrigger",
+          "0054: class Automation(db.Model):",
+          "0060:     type = db.Column(db.String(50), nullable=False)  # \"leads_sheet\" (demo) or others",
+          "0070:     user = db.relationship(\"User\", backref=\"automations\")",
+          "0076:     automation_id = db.Column(db.Integer, db.ForeignKey(\"automation.id\"), nullable=False)",
+          "0082:     automation = db.relationship(\"Automation\", backref=\"runs\")",
+          "0102:     auto_cols = sqlite_table_columns(DB_PATH, \"automation\")"
+        ]
+      },
+      {
+        "path": "web/enhanced_automation.py",
+        "keyword_score": 2,
+        "preview": [
+          "0002: \ud83c\udfaf ENHANCED AUTOMATION MODULE - WEEKS 19-20",
+          "0003: \u26a1 Advanced automation features with error handling, scheduling, and email integration",
+          "0022: automation_bp = Blueprint('automation', __name__)",
+          "0028: class EnhancedAutomationSystem:",
+          "0029:     \"\"\"Enhanced automation system with scheduling and email capabilities\"\"\"",
+          "0035:         self.workflows_dir = \"automation_workflows\"",
+          "0036:         self.logs_dir = \"automation_logs\"",
+          "0046:         print(\"\u2705 Enhanced Automation System Initialized (Week 19-20)\")",
+          "0176: \ud83e\udd16 Multi-Agent Automation System",
+          "0179: \u26a1 Desktop Automation Workflows"
+        ]
+      }
+    ],
+    "note": "Heuristic scan: shows likely files that define automation types/registry/scheduler."
+  },
+  "pip_freeze_head": [
+    "APScheduler==3.11.2",
+    "blinker==1.9.0",
+    "cachetools==6.2.4",
+    "certifi==2025.11.12",
+    "charset-normalizer==3.4.4",
+    "click==8.3.1",
+    "colorama==0.4.6",
+    "Flask==3.1.2",
+    "Flask-SQLAlchemy==3.1.1",
+    "google-auth==2.41.1",
+    "google-auth-oauthlib==1.2.3",
+    "greenlet==3.3.0",
+    "gspread==6.2.1",
+    "idna==3.11",
+    "itsdangerous==2.2.0",
+    "Jinja2==3.1.6",
+    "MarkupSafe==3.0.3",
+    "oauthlib==3.3.1",
+    "pyasn1==0.6.1",
+    "pyasn1_modules==0.4.2",
+    "requests==2.32.5",
+    "requests-oauthlib==2.0.0",
+    "rsa==4.9.1",
+    "SQLAlchemy==2.0.45",
+    "typing_extensions==4.15.0",
+    "tzdata==2025.3",
+    "tzlocal==5.3.1",
+    "urllib3==2.6.2",
+    "Werkzeug==3.1.4"
+  ],
+  "flask": {
+    "app_module": "web.app",
+    "app_object": "app",
+    "error": "ModuleNotFoundError(\"No module named 'web'\")",
+    "how_to_fix": "Set STATUS_APP_MODULE and STATUS_APP_OBJECT env vars, e.g.\nset STATUS_APP_MODULE=web.app\nset STATUS_APP_OBJECT=app\nthen rerun."
+  }
+}

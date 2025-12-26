@@ -1,0 +1,152 @@
+<!-- web/templates/vibe_coding.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe Coding - Ultimate No-Code Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/vibe.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="vibe-container">
+        <!-- Header -->
+        <div class="vibe-header">
+            <div class="logo">
+                <i class="fas fa-magic"></i>
+                <h1>Vibe Coding Agent</h1>
+                <span class="tagline">Surpassing Cursor & Antigravity</span>
+            </div>
+            <div class="status">
+                <span class="status-indicator active"></span>
+                <span>AI Active</span>
+            </div>
+        </div>
+
+        <!-- Main Interface -->
+        <div class="vibe-main">
+            <!-- Left Panel: Vibe Input -->
+            <div class="vibe-input-panel">
+                <h2><i class="fas fa-comment-dots"></i> Natural Language Input</h2>
+                <div class="input-area">
+                    <textarea id="vibeInput" placeholder="Type your vibe... Example: 'Check if pandas is newer than 1.0.0 and create a sample script'" rows="5"></textarea>
+                    <div class="input-actions">
+                        <button class="btn-primary" onclick="executeVibe()">
+                            <i class="fas fa-play"></i> Execute Vibe
+                        </button>
+                        <button class="btn-secondary" onclick="clearInput()">
+                            <i class="fas fa-trash"></i> Clear
+                        </button>
+                        <button class="btn-voice" onclick="startVoiceInput()">
+                            <i class="fas fa-microphone"></i> Voice
+                        </button>
+                    </div>
+                    <div class="quick-templates">
+                        <h3>Quick Templates:</h3>
+                        <div class="template-grid">
+                            <button class="template-btn" onclick="useTemplate('Check version of numpy')">
+                                Check Package Version
+                            </button>
+                            <button class="template-btn" onclick="useTemplate('Scrape data from website')">
+                                Web Scraping
+                            </button>
+                            <button class="template-btn" onclick="useTemplate('Create CSV file with sample data')">
+                                Create CSV File
+                            </button>
+                            <button class="template-btn" onclick="useTemplate('Make API request to GitHub')">
+                                API Request
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Center Panel: Generated Code -->
+            <div class="code-panel">
+                <h2><i class="fas fa-code"></i> Generated Code</h2>
+                <div class="code-editor">
+                    <div class="editor-header">
+                        <span class="language-tag">Python</span>
+                        <button class="btn-copy" onclick="copyCode()">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                    </div>
+                    <pre id="generatedCode"># Code will appear here...</pre>
+                </div>
+                <div class="execution-controls">
+                    <button class="btn-execute" onclick="executeGeneratedCode()">
+                        <i class="fas fa-play-circle"></i> Execute Code
+                    </button>
+                    <button class="btn-save" onclick="saveWorkflow()">
+                        <i class="fas fa-save"></i> Save as Workflow
+                    </button>
+                    <button class="btn-optimize" onclick="optimizeCode()">
+                        <i class="fas fa-bolt"></i> Optimize
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Panel: Execution Results -->
+            <div class="results-panel">
+                <h2><i class="fas fa-check-circle"></i> Execution Results</h2>
+                <div class="results-container">
+                    <div class="result-header">
+                        <span>Status: <span id="executionStatus">Ready</span></span>
+                        <span>Time: <span id="executionTime">0s</span></span>
+                    </div>
+                    <div class="output-window">
+                        <pre id="executionOutput">Output will appear here...</pre>
+                    </div>
+                    <div class="verification-results">
+                        <h3><i class="fas fa-shield-alt"></i> Verification Results</h3>
+                        <div id="verificationOutput">
+                            <div class="verification-item success">
+                                <i class="fas fa-check"></i>
+                                <span>Code syntax valid</span>
+                            </div>
+                            <div class="verification-item warning">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <span>No security issues detected</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Panel: History & Workflows -->
+        <div class="history-panel">
+            <div class="tabs">
+                <button class="tab active" onclick="switchTab('history')">
+                    <i class="fas fa-history"></i> Execution History
+                </button>
+                <button class="tab" onclick="switchTab('workflows')">
+                    <i class="fas fa-project-diagram"></i> Saved Workflows
+                </button>
+                <button class="tab" onclick="switchTab('agents')">
+                    <i class="fas fa-robot"></i> Agent Performance
+                </button>
+            </div>
+            <div class="tab-content" id="historyTab">
+                <div class="history-list" id="executionHistory">
+                    <!-- History items will be loaded here -->
+                </div>
+            </div>
+            <div class="tab-content" id="workflowsTab" style="display: none;">
+                <div class="workflows-list" id="workflowsList">
+                    <!-- Workflows will be loaded here -->
+                </div>
+            </div>
+            <div class="tab-content" id="agentsTab" style="display: none;">
+                <div class="agents-stats">
+                    <!-- Agent stats will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.socket.io/4.5.0/socket.io.min.js"></script>
+    <script src="{{ url_for('static', filename='js/vibe_coding.js') }}"></script>
+</body>
+</html>

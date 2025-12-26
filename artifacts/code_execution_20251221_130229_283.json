@@ -1,0 +1,23 @@
+{
+  "id": "code_execution_20251221_130229_283",
+  "type": "code_execution",
+  "content": {
+    "code": "\ndef process_data():\n    # Process some data\n    data = [1, 2, 3, 4, 5]\n    processed = [x * 2 for x in data]\n    print(f\"Original data: {data}\")\n    print(f\"Processed data: {processed}\")\n    return processed\n\nif __name__ == \"__main__\":\n    process_data()\n",
+    "result": {
+      "success": true,
+      "output": "Original data: [1, 2, 3, 4, 5]\nProcessed data: [2, 4, 6, 8, 10]\n",
+      "error": "",
+      "exit_code": 0,
+      "temp_file": null,
+      "execution_time": 0.29640936851501465
+    },
+    "execution_time": 0.29640936851501465
+  },
+  "metadata": {
+    "success": true,
+    "execution_time": 0.29640936851501465,
+    "output_length": 64
+  },
+  "timestamp": "2025-12-21T13:02:29.283386",
+  "platform": "win32"
+}

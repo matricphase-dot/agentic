@@ -1,0 +1,596 @@
+/**
+ * Agentic Workflow Engine - Dashboard JavaScript
+ * Real-time monitoring and interactivity
+ */
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Socket.IO
+    const socket = io();
+    
+    // DOM Elements
+    const createWorkflowBtn = document.getElementById('createWorkflowBtn');
+    const workflowForm = document.getElementById('workflowForm');
+    const taskInput = document.getElementById('taskInput');
+    const workflowList = document.getElementById('workflowList');
+    const verificationList = document.getElementById('verificationList');
+    const metricsCards = document.querySelectorAll('.metric-card');
+    
+    // Initialize charts
+    initCharts();
+    
+    // Socket.IO event handlers
+    socket.on('connect', function() {
+        console.log('Connected to real-time dashboard');
+        updateConnectionStatus(true);
+    });
+    
+    socket.on('disconnect', function() {
+        console.log('Disconnected from dashboard');
+        updateConnectionStatus(false);
+    });
+    
+    socket.on('metrics_update', function(data) {
+        updateMetrics(data);
+    });
+    
+    socket.on('workflow_created', function(data) {
+        showNotification('Workflow created successfully!', 'success');
+        if (data.success) {
+            addWorkflowToTable(data.workflow);
+        }
+    });
+    
+    socket.on('workflow_update', function(data) {
+        updateWorkflowStatus(data);
+    });
+    
+    socket.on('workflow_progress', function(data) {
+        updateWorkflowProgress(data);
+    });
+    
+    socket.on('workflow_completed', function(data) {
+        completeWorkflow(data);
+    });
+    
+    socket.on('verification_update', function(data) {
+        addVerificationEvent(data);
+    });
+    
+    socket.on('verification_event', function(data) {
+        addVerificationEvent(data);
+    });
+    
+    // Request initial metrics
+    socket.emit('request_metrics');
+    
+    // Event Listeners
+    if (createWorkflowBtn) {
+        createWorkflowBtn.addEventListener('click', function() {
+            createWorkflow();
+        });
+    }
+    
+    if (workflowForm) {
+        workflowForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            createWorkflow();
+        });
+    }
+    
+    // Functions
+    function updateConnectionStatus(connected) {
+        const statusIndicator = document.getElementById('connectionStatus');
+        if (statusIndicator) {
+            statusIndicator.textContent = connected ? '🟢 Connected' : '🔴 Disconnected';
+            statusIndicator.className = connected ? 'realtime-indicator' : 'realtime-indicator disconnected';
+        }
+    }
+    
+    function updateMetrics(metrics) {
+        metricsCards.forEach(card => {
+            const metricName = card.dataset.metric;
+            if (metrics[metricName] !== undefined) {
+                const valueElement = card.querySelector('.metric-value');
+                if (valueElement) {
+                    // Animate the metric value change
+                    const currentValue = parseFloat(valueElement.textContent) || 0;
+                    const targetValue = parseFloat(metrics[metricName]);
+                    animateValue(valueElement, currentValue, targetValue, 500);
+                    
+                    // Update trend indicator if available
+                    const trendElement = card.querySelector('.metric-trend');
+                    if (trendElement && trendElement.dataset.trend) {
+                        const trend = parseFloat(trendElement.dataset.trend);
+                        const change = targetValue - currentValue;
+                        updateTrendIndicator(trendElement, change);
+                    }
+                }
+            }
+        });
+    }
+    
+    function animateValue(element, start, end, duration) {
+        const startTime = performance.now();
+        const step = (currentTime) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            
+            // Easing function for smooth animation
+            const easedProgress = 1 - Math.pow(1 - progress, 3);
+            const currentValue = start + (end - start) * easedProgress;
+            
+            if (element.dataset.metric === 'success_rate' || element.dataset.metric === 'avg_confidence') {
+                element.textContent = currentValue.toFixed(1) + '%';
+            } else {
+                element.textContent = Math.round(currentValue);
+            }
+            
+            if (progress < 1) {
+                requestAnimationFrame(step);
+            }
+        };
+        requestAnimationFrame(step);
+    }
+    
+    function updateTrendIndicator(element, change) {
+        if (change > 0) {
+            element.innerHTML = '↗ ' + change.toFixed(1);
+            element.className = 'metric-trend trend-up';
+        } else if (change < 0) {
+            element.innerHTML = '↘ ' + Math.abs(change).toFixed(1);
+            element.className = 'metric-trend trend-down';
+        } else {
+            element.innerHTML = '→ 0.0';
+            element.className = 'metric-trend';
+        }
+    }
+    
+    function createWorkflow() {
+        const task = taskInput.value.trim();
+        if (!task) {
+            showNotification('Please enter a task description', 'error');
+            return;
+        }
+        
+        // Show loading state
+        createWorkflowBtn.disabled = true;
+        createWorkflowBtn.innerHTML = '<span class="spinner"></span> Creating...';
+        
+        // Send workflow creation request
+        fetch('/api/workflows', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ task: task })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                showNotification('Workflow created successfully!', 'success');
+                taskInput.value = '';
+                
+                // Add to workflow list if on workflows page
+                if (workflowList) {
+                    addWorkflowToTable(data.workflow);
+                }
+                
+                // Emit socket event for real-time updates
+                socket.emit('create_workflow', { task: task });
+            } else {
+                showNotification(data.message || 'Failed to create workflow', 'error');
+            }
+        })
+        .catch(error => {
+            console.error('Error creating workflow:', error);
+            showNotification('Error creating workflow', 'error');
+        })
+        .finally(() => {
+            // Reset button state
+            createWorkflowBtn.disabled = false;
+            createWorkflowBtn.innerHTML = 'Create Workflow';
+        });
+    }
+    
+    function addWorkflowToTable(workflow) {
+        if (!workflowList) return;
+        
+        const row = document.createElement('tr');
+        row.id = `workflow-${workflow.id}`;
+        
+        const statusClass = getStatusClass(workflow.status);
+        const confidenceColor = getConfidenceColor(workflow.confidence);
+        
+        row.innerHTML = `
+            <td>${workflow.id}</td>
+            <td>
+                <strong>${workflow.name}</strong>
+                <small class="text-muted d-block">${workflow.description}</small>
+            </td>
+            <td><span class="status-badge ${statusClass}">${workflow.status}</span></td>
+            <td>
+                ${workflow.confidence ? 
+                    `<div class="d-flex align-items-center">
+                        <span style="color: ${confidenceColor}; font-weight: bold;">${workflow.confidence}%</span>
+                        <div class="progress-bar ml-2" style="width: 60px;">
+                            <div class="progress-fill" style="width: ${workflow.confidence}%; background: ${confidenceColor};"></div>
+                        </div>
+                    </div>` : 
+                    '—'
+                }
+            </td>
+            <td>${workflow.steps}</td>
+            <td>${workflow.created_at}</td>
+            <td>${workflow.execution_time || '—'}</td>
+            <td>
+                <button class="btn btn-sm btn-secondary" onclick="viewWorkflowDetails(${workflow.id})">
+                    View
+                </button>
+            </td>
+        `;
+        
+        // Add to beginning of table
+        workflowList.insertBefore(row, workflowList.firstChild);
+        
+        // Add progress bar for running workflows
+        if (workflow.status === 'running') {
+            addProgressBar(workflow.id);
+        }
+    }
+    
+    function updateWorkflowStatus(workflow) {
+        const row = document.getElementById(`workflow-${workflow.id}`);
+        if (!row) return;
+        
+        const statusCell = row.cells[2];
+        const confidenceCell = row.cells[3];
+        
+        // Update status
+        const statusClass = getStatusClass(workflow.status);
+        statusCell.innerHTML = `<span class="status-badge ${statusClass}">${workflow.status}</span>`;
+        
+        // Update confidence if available
+        if (workflow.confidence) {
+            const confidenceColor = getConfidenceColor(workflow.confidence);
+            confidenceCell.innerHTML = `
+                <div class="d-flex align-items-center">
+                    <span style="color: ${confidenceColor}; font-weight: bold;">${workflow.confidence}%</span>
+                    <div class="progress-bar ml-2" style="width: 60px;">
+                        <div class="progress-fill" style="width: ${workflow.confidence}%; background: ${confidenceColor};"></div>
+                    </div>
+                </div>
+            `;
+        }
+        
+        // Update execution time
+        if (workflow.execution_time && row.cells[6]) {
+            row.cells[6].textContent = workflow.execution_time;
+        }
+    }
+    
+    function updateWorkflowProgress(data) {
+        const progressBar = document.getElementById(`progress-${data.workflow_id}`);
+        if (progressBar) {
+            progressBar.style.width = `${data.progress}%`;
+            progressBar.textContent = `${Math.round(data.progress)}%`;
+        }
+    }
+    
+    function completeWorkflow(workflow) {
+        updateWorkflowStatus(workflow);
+        
+        // Remove progress bar
+        const progressContainer = document.getElementById(`progress-container-${workflow.id}`);
+        if (progressContainer) {
+            progressContainer.remove();
+        }
+        
+        // Show notification
+        if (workflow.success) {
+            showNotification(`Workflow "${workflow.name}" completed successfully!`, 'success');
+        } else {
+            showNotification(`Workflow "${workflow.name}" failed to complete`, 'error');
+        }
+    }
+    
+    function addProgressBar(workflowId) {
+        const row = document.getElementById(`workflow-${workflowId}`);
+        if (!row) return;
+        
+        // Add progress bar row
+        const progressRow = document.createElement('tr');
+        progressRow.id = `progress-container-${workflowId}`;
+        progressRow.innerHTML = `
+            <td colspan="8" style="padding: 0.5rem 1rem;">
+                <div class="d-flex align-items-center">
+                    <small class="text-muted mr-2">Progress:</small>
+                    <div class="progress-bar" style="flex: 1;">
+                        <div id="progress-${workflowId}" class="progress-fill progress-success" style="width: 0%">0%</div>
+                    </div>
+                </div>
+            </td>
+        `;
+        
+        // Insert after the workflow row
+        row.parentNode.insertBefore(progressRow, row.nextSibling);
+    }
+    
+    function addVerificationEvent(verification) {
+        if (!verificationList) return;
+        
+        const row = document.createElement('tr');
+        const successIcon = verification.success ? '✅' : '❌';
+        const confidenceColor = getConfidenceColor(verification.confidence);
+        
+        row.innerHTML = `
+            <td>${verification.id}</td>
+            <td><code>${verification.task}</code></td>
+            <td>${successIcon} ${verification.success ? 'Passed' : 'Failed'}</td>
+            <td>
+                <span style="color: ${confidenceColor}; font-weight: bold;">
+                    ${verification.confidence}%
+                </span>
+            </td>
+            <td>${verification.timestamp}</td>
+            <td>
+                <button class="btn btn-sm btn-secondary" onclick="viewVerificationDetails(${verification.id})">
+                    Details
+                </button>
+            </td>
+        `;
+        
+        // Add to beginning of table
+        verificationList.insertBefore(row, verificationList.firstChild);
+        
+        // Limit table size
+        if (verificationList.children.length > 10) {
+            verificationList.removeChild(verificationList.lastChild);
+        }
+        
+        // Add visual effect for new verification
+        row.style.backgroundColor = verification.success ? 'rgba(76, 175, 80, 0.1)' : 'rgba(244, 67, 54, 0.1)';
+        setTimeout(() => {
+            row.style.backgroundColor = '';
+        }, 1000);
+    }
+    
+    function initCharts() {
+        // Load agent performance chart
+        fetch('/api/charts/agent-performance')
+            .then(response => response.json())
+            .then(data => {
+                const chartContainer = document.getElementById('agentPerformanceChart');
+                if (chartContainer) {
+                    Plotly.newPlot(chartContainer, JSON.parse(data));
+                }
+            });
+        
+        // Load confidence trend chart
+        fetch('/api/charts/confidence-trend')
+            .then(response => response.json())
+            .then(data => {
+                const chartContainer = document.getElementById('confidenceTrendChart');
+                if (chartContainer) {
+                    Plotly.newPlot(chartContainer, JSON.parse(data));
+                }
+            });
+        
+        // Load verification methods chart
+        fetch('/api/charts/verification-methods')
+            .then(response => response.json())
+            .then(data => {
+                const chartContainer = document.getElementById('verificationMethodsChart');
+                if (chartContainer) {
+                    Plotly.newPlot(chartContainer, JSON.parse(data));
+                }
+            });
+    }
+    
+    function refreshCharts() {
+        initCharts();
+    }
+    
+    function showNotification(message, type = 'info') {
+        // Create notification element
+        const notification = document.createElement('div');
+        notification.className = `notification notification-${type}`;
+        notification.innerHTML = `
+            <div class="notification-content">
+                ${type === 'success' ? '✅' : type === 'error' ? '❌' : 'ℹ️'} ${message}
+            </div>
+            <button class="notification-close" onclick="this.parentElement.remove()">×</button>
+        `;
+        
+        // Add to notification container
+        const container = document.getElementById('notificationContainer') || createNotificationContainer();
+        container.appendChild(notification);
+        
+        // Auto-remove after 5 seconds
+        setTimeout(() => {
+            if (notification.parentElement) {
+                notification.remove();
+            }
+        }, 5000);
+    }
+    
+    function createNotificationContainer() {
+        const container = document.createElement('div');
+        container.id = 'notificationContainer';
+        container.style.cssText = `
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            z-index: 9999;
+            max-width: 400px;
+        `;
+        document.body.appendChild(container);
+        return container;
+    }
+    
+    // Helper functions
+    function getStatusClass(status) {
+        switch(status) {
+            case 'completed': return 'status-completed';
+            case 'running': return 'status-running';
+            case 'failed': return 'status-failed';
+            case 'pending': return 'status-pending';
+            default: return '';
+        }
+    }
+    
+    function getConfidenceColor(confidence) {
+        if (confidence >= 80) return '#4CAF50'; // Green
+        if (confidence >= 60) return '#FF9800'; // Orange
+        return '#F44336'; // Red
+    }
+    
+    // Global functions for button clicks
+    window.viewWorkflowDetails = function(workflowId) {
+        fetch(`/api/workflows/${workflowId}`)
+            .then(response => response.json())
+            .then(workflow => {
+                showWorkflowModal(workflow);
+            });
+    };
+    
+    window.viewVerificationDetails = function(verificationId) {
+        // In a real implementation, this would fetch verification details
+        showNotification('Verification details would be shown here', 'info');
+    };
+    
+    window.showWorkflowModal = function(workflow) {
+        // Create modal element
+        const modal = document.createElement('div');
+        modal.className = 'modal fade show';
+        modal.style.cssText = `
+            display: block;
+            background: rgba(0,0,0,0.5);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 9999;
+        `;
+        
+        modal.innerHTML = `
+            <div class="modal-dialog modal-lg" style="margin: 50px auto;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Workflow Details: ${workflow.name}</h5>
+                        <button type="button" class="close" onclick="this.closest('.modal').remove()">
+                            <span>×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6>Basic Information</h6>
+                                <p><strong>Description:</strong> ${workflow.description}</p>
+                                <p><strong>Status:</strong> <span class="status-badge ${getStatusClass(workflow.status)}">${workflow.status}</span></p>
+                                <p><strong>Confidence:</strong> ${workflow.confidence ? `${workflow.confidence}%` : 'N/A'}</p>
+                                <p><strong>Steps:</strong> ${workflow.steps}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <h6>Timing</h6>
+                                <p><strong>Created:</strong> ${workflow.created_at}</p>
+                                <p><strong>Completed:</strong> ${workflow.completed_at || 'N/A'}</p>
+                                <p><strong>Execution Time:</strong> ${workflow.execution_time || 'N/A'}</p>
+                                <p><strong>Success:</strong> ${workflow.success !== null ? (workflow.success ? 'Yes' : 'No') : 'N/A'}</p>
+                            </div>
+                        </div>
+                        
+                        ${workflow.plan && workflow.plan.steps ? `
+                            <hr>
+                            <h6>Workflow Steps</h6>
+                            <div class="workflow-steps">
+                                ${workflow.plan.steps.map((step, index) => `
+                                    <div class="workflow-step mb-2 p-2 border rounded">
+                                        <strong>Step ${step.step_id}:</strong> ${step.agent} → ${step.action}
+                                        <small class="text-muted d-block">${step.expected_output}</small>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        ` : ''}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" onclick="this.closest('.modal').remove()">Close</button>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        document.body.appendChild(modal);
+    };
+    
+    // Auto-refresh charts every 30 seconds
+    setInterval(refreshCharts, 30000);
+    
+    // Request metrics update every 10 seconds
+    setInterval(() => socket.emit('request_metrics'), 10000);
+});
+
+// Add notification styles
+const style = document.createElement('style');
+style.textContent = `
+    .notification {
+        background: white;
+        border-radius: 8px;
+        padding: 1rem;
+        margin-bottom: 0.5rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        animation: slideIn 0.3s ease;
+        border-left: 4px solid #2196F3;
+    }
+    
+    .notification-success {
+        border-left-color: #4CAF50;
+    }
+    
+    .notification-error {
+        border-left-color: #F44336;
+    }
+    
+    .notification-content {
+        flex: 1;
+    }
+    
+    .notification-close {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: #6c757d;
+        padding: 0 0.5rem;
+    }
+    
+    @keyframes slideIn {
+        from {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    
+    .spinner {
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        border: 2px solid #f3f3f3;
+        border-top: 2px solid #3498db;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+`;
+document.head.appendChild(style);

@@ -1,0 +1,52 @@
+PRODUCT HUNT LAUNCH DRAFT
+
+TAGLINE:
+"The no-code AI automation platform. Record once, deploy forever."
+
+DESCRIPTION:
+Knowledge workers waste 40% of their time on repetitive tasks.
+
+We built Autonomous Workflow Engine—the first platform where AI learns from your tasks and makes them better over time. No coding, no maintenance. Just record what you do, and our AI deploys it.
+
+🎯 WHAT IT DOES:
+✅ Record yourself doing a task (2-3 times)
+✅ AI analyzes & builds automation
+✅ Deploy instantly with 1 click
+✅ AI optimizes execution automatically
+✅ Join marketplace, buy/sell templates
+
+💡 WHAT MAKES US DIFFERENT:
+🔬 Proprietary ML model learns from every automation (competitors have none)
+🌍 Works on ANY application (Zapier only works with their integrations)
+🏪 Marketplace with 100+ templates (community-powered growth)
+🤖 Self-healing automations (85% of errors fixed without you)
+📈 ROI calculator (see exactly how much time you're saving)
+
+🚀 TRACTION:
+📊 1,000+ beta users
+📦 50+ templates already built
+⭐ 4.9★ average rating
+💵 $500+ weekly marketplace revenue
+✅ 95% automation success rate
+
+👉 LAUNCH OFFER:
+Free tier: 3 automations/month
+Pro tier: $29/month (unlimited)
+Early access: Free Pro for 3 months (this week only)
+
+MAKER COMMENT:
+"Hi ProductHunt! 👋
+
+I built this after wasting 20+ hours per week on repetitive tasks as a founder.
+
+Why we're different from Zapier/Make:
+1. Works on ANY software (not just integrations)
+2. Gets smarter every time you use it (ML-powered)
+3. Marketplace = your automations become products
+4. Self-healing = 85% of errors fixed automatically
+
+The core insight: Instead of building 1000 integrations, we use AI to understand ANY task you do, then automate it.
+
+Ask me anything in the comments! I'll be here all day. 🚀
+
+P.S. - If you launch with us this week, I'll give you a free year of Pro. DM me on Twitter @yourhandle"

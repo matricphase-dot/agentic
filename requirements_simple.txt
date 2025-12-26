@@ -1,0 +1,16 @@
+# File: D:\agentic-core\requirements_simple.txt
+"""
+Simplified requirements for testing phase.
+"""
+
+# Core dependencies (minimal set)
+python-dotenv>=1.0.0
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+
+# LangChain (lightweight version)
+langchain-core>=0.1.0
+langchain-text-splitters>=0.0.1
+langchain-community>=0.0.10
+
+# Remove the main langchain package to avoid conflicts

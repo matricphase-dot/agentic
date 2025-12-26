@@ -1,0 +1,25 @@
+2025-12-22 15:52:00,419 - __main__ - INFO - Desktop Automation initialized: 1366x768
+2025-12-22 15:52:00,495 - werkzeug - WARNING -  * Debugger is active!
+2025-12-22 15:52:00,509 - werkzeug - INFO -  * Debugger PIN: 919-109-530
+2025-12-22 15:53:11,057 - __main__ - INFO - Desktop Automation initialized: 1366x768
+2025-12-22 15:53:11,100 - werkzeug - INFO -  * Restarting with stat
+2025-12-22 15:53:13,738 - __main__ - INFO - Desktop Automation initialized: 1366x768
+2025-12-22 15:53:13,780 - werkzeug - WARNING -  * Debugger is active!
+2025-12-22 15:53:13,788 - werkzeug - INFO -  * Debugger PIN: 919-109-530
+2025-12-22 17:33:36,428 - werkzeug - INFO -  * Detected change in 'D:\\agentic-core\\web\\app.py', reloading
+2025-12-22 17:33:37,801 - werkzeug - INFO -  * Restarting with stat
+2025-12-22 17:33:43,627 - __main__ - INFO - Desktop Automation initialized: 1366x768
+2025-12-22 17:33:43,676 - werkzeug - WARNING -  * Debugger is active!
+2025-12-22 17:33:43,688 - werkzeug - INFO -  * Debugger PIN: 919-109-530
+2025-12-22 17:35:04,160 - werkzeug - INFO -  * Detected change in 'D:\\agentic-core\\web\\setup.py', reloading
+2025-12-22 17:35:04,407 - werkzeug - INFO -  * Restarting with stat
+2025-12-22 17:35:07,286 - __main__ - INFO - Desktop Automation initialized: 1366x768
+2025-12-22 17:35:07,320 - werkzeug - WARNING -  * Debugger is active!
+2025-12-22 17:35:07,327 - werkzeug - INFO -  * Debugger PIN: 919-109-530
+2025-12-22 17:36:16,002 - __main__ - INFO - Desktop Automation initialized: 1366x768
+2025-12-22 17:36:16,049 - werkzeug - INFO -  * Restarting with stat
+2025-12-22 17:36:18,747 - __main__ - INFO - Desktop Automation initialized: 1366x768
+2025-12-22 17:36:18,785 - werkzeug - WARNING -  * Debugger is active!
+2025-12-22 17:36:18,796 - werkzeug - INFO -  * Debugger PIN: 919-109-530
+2025-12-22 17:42:58,448 - werkzeug - INFO -  * Detected change in 'D:\\agentic-core\\web\\app.py', reloading
+2025-12-22 17:42:58,859 - werkzeug - INFO -  * Restarting with stat

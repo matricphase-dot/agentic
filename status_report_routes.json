@@ -1,0 +1,88 @@
+{
+  "timestamp": "2025-12-25T12:56:58",
+  "cwd": "d:\\agentic-core",
+  "project_root_added_to_syspath": "D:\\agentic-core",
+  "python": {
+    "executable": "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "version": "3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]"
+  },
+  "flask": {
+    "app_module": "web.app",
+    "app_object": "app",
+    "routes": [
+      {
+        "rule": "/",
+        "endpoint": "home",
+        "methods": [
+          "GET"
+        ]
+      },
+      {
+        "rule": "/create",
+        "endpoint": "create_automation",
+        "methods": [
+          "POST"
+        ]
+      },
+      {
+        "rule": "/health",
+        "endpoint": "health",
+        "methods": [
+          "GET"
+        ]
+      },
+      {
+        "rule": "/lead",
+        "endpoint": "lead_capture",
+        "methods": [
+          "GET",
+          "POST"
+        ]
+      },
+      {
+        "rule": "/login",
+        "endpoint": "login",
+        "methods": [
+          "GET",
+          "POST"
+        ]
+      },
+      {
+        "rule": "/logout",
+        "endpoint": "logout",
+        "methods": [
+          "GET"
+        ]
+      },
+      {
+        "rule": "/run/<int:automation_id>",
+        "endpoint": "run_now",
+        "methods": [
+          "GET"
+        ]
+      },
+      {
+        "rule": "/signup",
+        "endpoint": "signup",
+        "methods": [
+          "GET",
+          "POST"
+        ]
+      },
+      {
+        "rule": "/static/<path:filename>",
+        "endpoint": "static",
+        "methods": [
+          "GET"
+        ]
+      },
+      {
+        "rule": "/toggle/<int:automation_id>",
+        "endpoint": "toggle_automation",
+        "methods": [
+          "GET"
+        ]
+      }
+    ]
+  }
+}

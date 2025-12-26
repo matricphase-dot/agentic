@@ -1,0 +1,34 @@
+# Create a new requirements.txt with compatible versions
+cat > requirements_fixed.txt << 'EOF'
+# Core dependencies
+google-generativeai>=0.3.0
+chromadb>=0.4.18
+neo4j>=5.14.0
+python-dotenv>=1.0.0
+
+# LangChain/LangGraph with compatible versions
+langchain==0.0.353  # Stable version without breaking changes
+langchain-core==0.1.0
+langchain-community==0.0.10
+langgraph==0.0.47  # Compatible version
+
+# Execution & Utilities
+docker>=6.0.0
+astunparse>=1.6.3
+requests>=2.28.0
+beautifulsoup4>=4.11.0
+lxml>=4.9.0
+
+# Testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+
+# Optional (for web scraping)
+selenium>=4.10.0
+playwright>=1.35.0
+
+# Optional (for code analysis)
+bandit>=1.7.5
+pylint>=2.17.0
+EOF 
+gunicorn

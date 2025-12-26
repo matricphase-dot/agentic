@@ -1,0 +1,50 @@
+{
+  "pypi_fetcher": {
+    "description": "Fetch package information from PyPI",
+    "function": "fetch_pypi_package",
+    "parameters": [
+      "package_name"
+    ],
+    "returns": "Dict with package info"
+  },
+  "web_fetcher": {
+    "description": "Fetch and parse web pages",
+    "function": "fetch_webpage",
+    "parameters": [
+      "url",
+      "extract_text"
+    ],
+    "returns": "Webpage content and metadata"
+  },
+  "api_caller": {
+    "description": "Make API requests",
+    "function": "call_api",
+    "parameters": [
+      "url",
+      "method",
+      "headers",
+      "params",
+      "data",
+      "json_data"
+    ],
+    "returns": "API response"
+  },
+  "version_checker": {
+    "description": "Check package version compatibility",
+    "function": "check_package_version",
+    "parameters": [
+      "package_name",
+      "min_version"
+    ],
+    "returns": "Version compatibility result"
+  },
+  "comparison_tool": {
+    "description": "Compare two package versions",
+    "function": "compare_pypi_versions",
+    "parameters": [
+      "package1",
+      "package2"
+    ],
+    "returns": "Comparison results"
+  }
+}

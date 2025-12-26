@@ -1,0 +1,210 @@
+[
+  {
+    "id": "wf_1766392122",
+    "name": "Test_Workflow_1766392122",
+    "created_at": "2025-12-22T13:58:42.048699",
+    "parameters": {
+      "email": {
+        "description": "Input for step 2",
+        "default_value": "john@example.com",
+        "type": "email",
+        "required": true,
+        "step_number": 2
+      },
+      "param_2": {
+        "description": "Input for step 5",
+        "default_value": "AI Engineer Jobs",
+        "type": "text",
+        "required": true,
+        "step_number": 5
+      }
+    },
+    "abstract_steps": [
+      {
+        "action_type": "click",
+        "timestamp": 1766392114.0704002,
+        "position": [
+          100,
+          200
+        ],
+        "value": null,
+        "element_info": {
+          "type": "button",
+          "name": "login_button"
+        },
+        "screenshot_path": null,
+        "is_parameter": false,
+        "parameter_name": null
+      },
+      {
+        "action_type": "type",
+        "timestamp": 1766392115.0704165,
+        "position": null,
+        "value": "john@example.com",
+        "element_info": null,
+        "screenshot_path": null,
+        "is_parameter": true,
+        "parameter_name": "email"
+      },
+      {
+        "action_type": "click",
+        "timestamp": 1766392117.070427,
+        "position": [
+          150,
+          250
+        ],
+        "value": null,
+        "element_info": {
+          "type": "button",
+          "name": "submit_button"
+        },
+        "screenshot_path": null,
+        "is_parameter": false,
+        "parameter_name": null
+      },
+      {
+        "action_type": "wait",
+        "timestamp": 1766392118.0704324,
+        "position": null,
+        "value": "2.0",
+        "element_info": null,
+        "screenshot_path": null,
+        "is_parameter": false,
+        "parameter_name": null
+      },
+      {
+        "action_type": "type",
+        "timestamp": 1766392119.0704372,
+        "position": null,
+        "value": "AI Engineer Jobs",
+        "element_info": null,
+        "screenshot_path": null,
+        "is_parameter": true,
+        "parameter_name": "param_2"
+      },
+      {
+        "action_type": "click",
+        "timestamp": 1766392120.070441,
+        "position": [
+          200,
+          300
+        ],
+        "value": null,
+        "element_info": {
+          "type": "button",
+          "name": "search_button"
+        },
+        "screenshot_path": null,
+        "is_parameter": false,
+        "parameter_name": null
+      }
+    ],
+    "total_steps": 6,
+    "parameter_count": 2,
+    "status": "ready"
+  },
+  {
+    "id": "wf_1766392124",
+    "name": "Save_Test_Workflow",
+    "created_at": "2025-12-22T13:58:44.099812",
+    "parameters": {
+      "email": {
+        "description": "Input for step 2",
+        "default_value": "john@example.com",
+        "type": "email",
+        "required": true,
+        "step_number": 2
+      },
+      "param_2": {
+        "description": "Input for step 5",
+        "default_value": "AI Engineer Jobs",
+        "type": "text",
+        "required": true,
+        "step_number": 5
+      }
+    },
+    "abstract_steps": [
+      {
+        "action_type": "click",
+        "timestamp": 1766392115.107304,
+        "position": [
+          100,
+          200
+        ],
+        "value": null,
+        "element_info": {
+          "type": "button",
+          "name": "login_button"
+        },
+        "screenshot_path": null,
+        "is_parameter": false,
+        "parameter_name": null
+      },
+      {
+        "action_type": "type",
+        "timestamp": 1766392116.1073303,
+        "position": null,
+        "value": "john@example.com",
+        "element_info": null,
+        "screenshot_path": null,
+        "is_parameter": true,
+        "parameter_name": "email"
+      },
+      {
+        "action_type": "click",
+        "timestamp": 1766392118.1073453,
+        "position": [
+          150,
+          250
+        ],
+        "value": null,
+        "element_info": {
+          "type": "button",
+          "name": "submit_button"
+        },
+        "screenshot_path": null,
+        "is_parameter": false,
+        "parameter_name": null
+      },
+      {
+        "action_type": "wait",
+        "timestamp": 1766392119.1073508,
+        "position": null,
+        "value": "2.0",
+        "element_info": null,
+        "screenshot_path": null,
+        "is_parameter": false,
+        "parameter_name": null
+      },
+      {
+        "action_type": "type",
+        "timestamp": 1766392120.1073546,
+        "position": null,
+        "value": "AI Engineer Jobs",
+        "element_info": null,
+        "screenshot_path": null,
+        "is_parameter": true,
+        "parameter_name": "param_2"
+      },
+      {
+        "action_type": "click",
+        "timestamp": 1766392121.1073587,
+        "position": [
+          200,
+          300
+        ],
+        "value": null,
+        "element_info": {
+          "type": "button",
+          "name": "search_button"
+        },
+        "screenshot_path": null,
+        "is_parameter": false,
+        "parameter_name": null
+      }
+    ],
+    "total_steps": 6,
+    "parameter_count": 2,
+    "status": "ready"
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "id": "taught_phase4_test",
+  "name": "Check Python Package",
+  "description": "Check if a Python package meets requirements",
+  "steps": [
+    {
+      "id": 1,
+      "action": "research",
+      "parameters": {
+        "query": "{{package_name}}",
+        "source": "pypi"
+      }
+    },
+    {
+      "id": 2,
+      "action": "verify",
+      "parameters": {
+        "check_type": "version",
+        "expected": "{{min_version}}"
+      }
+    }
+  ],
+  "parameters": [
+    "package_name",
+    "min_version"
+  ],
+  "created": "2025-12-19T15:37:42.040820"
+}

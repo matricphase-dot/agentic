@@ -1,0 +1,2 @@
+# Simple requirements - no numpy/opencv issues
+flask==2.3.3

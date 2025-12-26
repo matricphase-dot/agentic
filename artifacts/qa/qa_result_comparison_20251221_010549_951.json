@@ -1,0 +1,23 @@
+{
+  "id": "qa_result_comparison_20251221_010549_951",
+  "type": "result_comparison",
+  "content": {
+    "method": "semantic",
+    "similarity_score": 0.9565217391304348,
+    "differences": [
+      "--- ",
+      "+++ ",
+      "@@ -1 +1 @@",
+      "-Hello World",
+      "+Hello World!"
+    ],
+    "are_equivalent": true
+  },
+  "metadata": {
+    "method": "semantic",
+    "similarity": 0.9565217391304348,
+    "equivalent": true
+  },
+  "timestamp": "2025-12-21T01:05:49.951178",
+  "platform": "win32"
+}

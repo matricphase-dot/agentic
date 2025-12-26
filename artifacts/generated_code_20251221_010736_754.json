@@ -1,0 +1,22 @@
+{
+  "id": "generated_code_20251221_010736_754",
+  "type": "generated_code",
+  "content": "\ndef calculate():\n    # Simple calculation based on requirements\n    result = 5 + 3  # Example calculation\n    print(f\"Calculation result: {result}\")\n    return result\n\nif __name__ == \"__main__\":\n    calculate()\n",
+  "metadata": {
+    "requirements": "Create a function to calculate factorial",
+    "language": "python",
+    "template": "math",
+    "safety_check": {
+      "syntax_valid": true,
+      "safety_score": 1.0,
+      "safe_to_run": true,
+      "issues": [],
+      "warnings": [],
+      "line_count": 10,
+      "character_count": 212
+    },
+    "platform": "win32"
+  },
+  "timestamp": "2025-12-21T01:07:36.754123",
+  "platform": "win32"
+}

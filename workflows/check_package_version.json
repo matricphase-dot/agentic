@@ -1,0 +1,31 @@
+{
+  "id": "check_package_version",
+  "name": "Check Package Version",
+  "description": "Check if a Python package meets version requirements",
+  "version": "1.0",
+  "created": "2024-01-01",
+  "steps": [
+    {
+      "id": 1,
+      "action": "research",
+      "tool": "pypi_client",
+      "parameters": {
+        "package_name": "{{package}}"
+      }
+    },
+    {
+      "id": 2,
+      "action": "verify",
+      "tool": "compare_versions",
+      "parameters": {
+        "version1": "{{step1_output}}",
+        "version2": "{{min_version}}",
+        "operator": ">="
+      }
+    }
+  ],
+  "inputs": [
+    "package",
+    "min_version"
+  ]
+}

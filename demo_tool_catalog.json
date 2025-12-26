@@ -1,0 +1,254 @@
+{
+  "tools": [
+    {
+      "name": "fetch_pypi_package",
+      "description": "Fetch package information from PyPI",
+      "tool_type": "research",
+      "function": "fetch_pypi_package",
+      "parameters": [
+        {
+          "name": "package_name",
+          "type": "str",
+          "description": "Name of the Python package",
+          "required": true,
+          "default": null,
+          "constraints": []
+        }
+      ],
+      "returns": {
+        "type": "dict",
+        "description": "Package information"
+      },
+      "dependencies": [],
+      "examples": [
+        "fetch_pypi_package('requests')",
+        "fetch_pypi_package('langchain')"
+      ],
+      "status": "active",
+      "version": "1.0.0",
+      "created_at": "2025-12-19T21:56:12.907016",
+      "usage_count": 1,
+      "success_count": 1,
+      "avg_execution_time": 1.308952,
+      "last_used": "2025-12-19T21:56:12.977673"
+    },
+    {
+      "name": "fetch_webpage",
+      "description": "Fetch and parse a webpage",
+      "tool_type": "research",
+      "function": "fetch_webpage",
+      "parameters": [
+        {
+          "name": "url",
+          "type": "str",
+          "description": "Webpage URL",
+          "required": true,
+          "default": null,
+          "constraints": []
+        },
+        {
+          "name": "extract_text",
+          "type": "bool",
+          "description": "Extract text content",
+          "required": false,
+          "default": true,
+          "constraints": []
+        }
+      ],
+      "returns": {
+        "type": "dict",
+        "description": "Webpage content and metadata"
+      },
+      "dependencies": [],
+      "examples": [
+        "fetch_webpage('https://example.com')"
+      ],
+      "status": "active",
+      "version": "1.0.0",
+      "created_at": "2025-12-19T21:56:12.907130",
+      "usage_count": 0,
+      "success_count": 0,
+      "avg_execution_time": 0.0,
+      "last_used": null
+    },
+    {
+      "name": "call_api",
+      "description": "Make API call",
+      "tool_type": "api",
+      "function": "call_api",
+      "parameters": [
+        {
+          "name": "url",
+          "type": "str",
+          "description": "API endpoint URL",
+          "required": true,
+          "default": null,
+          "constraints": []
+        },
+        {
+          "name": "method",
+          "type": "str",
+          "description": "HTTP method",
+          "required": false,
+          "default": "GET",
+          "constraints": []
+        },
+        {
+          "name": "headers",
+          "type": "dict",
+          "description": "Request headers",
+          "required": false,
+          "default": null,
+          "constraints": []
+        },
+        {
+          "name": "params",
+          "type": "dict",
+          "description": "Query parameters",
+          "required": false,
+          "default": null,
+          "constraints": []
+        },
+        {
+          "name": "data",
+          "type": "dict",
+          "description": "Form data",
+          "required": false,
+          "default": null,
+          "constraints": []
+        },
+        {
+          "name": "json_data",
+          "type": "dict",
+          "description": "JSON data",
+          "required": false,
+          "default": null,
+          "constraints": []
+        }
+      ],
+      "returns": {
+        "type": "dict",
+        "description": "API response"
+      },
+      "dependencies": [],
+      "examples": [
+        "call_api('https://api.github.com/zen')"
+      ],
+      "status": "active",
+      "version": "1.0.0",
+      "created_at": "2025-12-19T21:56:12.907173",
+      "usage_count": 0,
+      "success_count": 0,
+      "avg_execution_time": 0.0,
+      "last_used": null
+    },
+    {
+      "name": "compare_pypi_versions",
+      "description": "Compare two PyPI package versions",
+      "tool_type": "research",
+      "function": "compare_pypi_versions",
+      "parameters": [
+        {
+          "name": "package1",
+          "type": "str",
+          "description": "First package name",
+          "required": true,
+          "default": null,
+          "constraints": []
+        },
+        {
+          "name": "package2",
+          "type": "str",
+          "description": "Second package name",
+          "required": true,
+          "default": null,
+          "constraints": []
+        }
+      ],
+      "returns": {
+        "type": "dict",
+        "description": "Comparison results"
+      },
+      "dependencies": [],
+      "examples": [
+        "compare_pypi_versions('requests', 'aiohttp')"
+      ],
+      "status": "active",
+      "version": "1.0.0",
+      "created_at": "2025-12-19T21:56:12.907202",
+      "usage_count": 0,
+      "success_count": 0,
+      "avg_execution_time": 0.0,
+      "last_used": null
+    },
+    {
+      "name": "check_package_version",
+      "description": "Check if a package meets version requirements",
+      "tool_type": "validation",
+      "function": "check_package_version",
+      "parameters": [
+        {
+          "name": "package_name",
+          "type": "str",
+          "description": "Name of the package",
+          "required": true,
+          "default": null,
+          "constraints": []
+        },
+        {
+          "name": "min_version",
+          "type": "str",
+          "description": "Minimum required version",
+          "required": false,
+          "default": null,
+          "constraints": []
+        }
+      ],
+      "returns": {
+        "type": "dict",
+        "description": "Version check results"
+      },
+      "dependencies": [],
+      "examples": [
+        "check_package_version('numpy', '1.20.0')"
+      ],
+      "status": "active",
+      "version": "1.0.0",
+      "created_at": "2025-12-19T21:56:12.907232",
+      "usage_count": 1,
+      "success_count": 0,
+      "avg_execution_time": 0.0,
+      "last_used": "2025-12-19T21:56:14.333537"
+    },
+    {
+      "name": "string_analyzer",
+      "description": "Analyze string characteristics",
+      "tool_type": "utility",
+      "function": "string_analyzer",
+      "parameters": [
+        {
+          "name": "text",
+          "type": "<class 'str'>",
+          "description": "Parameter text",
+          "required": true,
+          "default": null,
+          "constraints": []
+        }
+      ],
+      "returns": {},
+      "dependencies": [],
+      "examples": [],
+      "status": "active",
+      "version": "1.0.0",
+      "created_at": "2025-12-19T21:56:14.294229",
+      "usage_count": 1,
+      "success_count": 1,
+      "avg_execution_time": 3.3e-05,
+      "last_used": "2025-12-19T21:56:14.295016"
+    }
+  ],
+  "metadata": {
+    "exported_at": "2025-12-19T21:56:14.354388",
+    "total_tools": 6
+  }
+}

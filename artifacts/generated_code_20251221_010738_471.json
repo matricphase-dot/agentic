@@ -1,0 +1,22 @@
+{
+  "id": "generated_code_20251221_010738_471",
+  "type": "generated_code",
+  "content": "\ndef process_data():\n    # Process some data\n    data = [1, 2, 3, 4, 5]\n    processed = [x * 2 for x in data]\n    print(f\"Original data: {data}\")\n    print(f\"Processed data: {processed}\")\n    return processed\n\nif __name__ == \"__main__\":\n    process_data()\n",
+  "metadata": {
+    "requirements": "Process and analyze data",
+    "language": "python",
+    "template": "data",
+    "safety_check": {
+      "syntax_valid": true,
+      "safety_score": 1.0,
+      "safe_to_run": true,
+      "issues": [],
+      "warnings": [],
+      "line_count": 12,
+      "character_count": 256
+    },
+    "platform": "win32"
+  },
+  "timestamp": "2025-12-21T01:07:38.471076",
+  "platform": "win32"
+}

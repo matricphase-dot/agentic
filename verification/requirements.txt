@@ -1,0 +1,8 @@
+# Requirements for Enhanced Verification System
+# No additional dependencies required for basic functionality
+# Optional: aiohttp for async HTTP requests in failure recovery
+# Optional: backoff for exponential backoff
+
+# Basic requirements already in main requirements.txt:
+# - Python 3.8+
+# - Standard library only for basic functionality

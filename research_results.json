@@ -1,0 +1,8 @@
+{
+  "package": "requests",
+  "version": "2.32.5",
+  "is_newer_than_2_25_0": "unknown",
+  "documentation": "https://requests.readthedocs.io",
+  "summary": "Python HTTP for Humans....",
+  "timestamp": "2025-12-19T21:46:44.860899"
+}

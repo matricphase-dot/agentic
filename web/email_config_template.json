@@ -1,0 +1,8 @@
+{
+  "smtp_server": "smtp.gmail.com",
+  "smtp_port": 587,
+  "sender_email": "your_email@gmail.com",
+  "sender_password": "your_app_specific_password",
+  "use_tls": true,
+  "default_subject": "Agentic Workflow Engine Notification"
+}

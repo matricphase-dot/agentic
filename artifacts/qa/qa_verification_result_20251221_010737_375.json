@@ -1,0 +1,53 @@
+{
+  "id": "qa_verification_result_20251221_010737_375",
+  "type": "verification_result",
+  "content": {
+    "task": "Test verification",
+    "output_type": "dict",
+    "verification_time": "2025-12-21T01:07:37.374887",
+    "rules_applied": [
+      {
+        "name": "format_verifier",
+        "description": "Verifies data format and structure",
+        "severity": "medium",
+        "score": 1.0
+      },
+      {
+        "name": "content_verifier",
+        "description": "Verifies content completeness and quality",
+        "severity": "high",
+        "score": 1.0
+      }
+    ],
+    "overall_score": 1.0,
+    "passed": true,
+    "detailed_results": {
+      "format_verifier": {
+        "passed": true,
+        "issues": [],
+        "suggestions": []
+      },
+      "content_verifier": {
+        "passed": true,
+        "issues": [],
+        "suggestions": []
+      }
+    },
+    "issues": [],
+    "suggestions": [],
+    "criteria_validation": {
+      "passed_criteria": [],
+      "failed_criteria": [],
+      "details": {}
+    },
+    "format_valid": true
+  },
+  "metadata": {
+    "task": "Test verification",
+    "verification_score": 1.0,
+    "passed": true,
+    "issues_count": 0
+  },
+  "timestamp": "2025-12-21T01:07:37.375371",
+  "platform": "win32"
+}

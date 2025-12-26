@@ -1,0 +1,55 @@
+{
+  "id": "qa_verification_result_20251221_010549_963",
+  "type": "verification_result",
+  "content": {
+    "task": "Test: Simple text",
+    "output_type": "str",
+    "verification_time": "2025-12-21T01:05:49.963030",
+    "rules_applied": [
+      {
+        "name": "format_verifier",
+        "description": "Verifies data format and structure",
+        "severity": "medium",
+        "score": 0.5
+      },
+      {
+        "name": "content_verifier",
+        "description": "Verifies content completeness and quality",
+        "severity": "high",
+        "score": 0.5
+      }
+    ],
+    "overall_score": 0.6499999999999999,
+    "passed": false,
+    "detailed_results": {
+      "format_verifier": {
+        "passed": false,
+        "issues": [],
+        "suggestions": []
+      },
+      "content_verifier": {
+        "passed": false,
+        "issues": [],
+        "suggestions": []
+      }
+    },
+    "issues": [],
+    "suggestions": [],
+    "criteria_validation": {
+      "passed_criteria": [
+        "length >= 10"
+      ],
+      "failed_criteria": [],
+      "details": {}
+    },
+    "format_valid": true
+  },
+  "metadata": {
+    "task": "Test: Simple text",
+    "verification_score": 0.6499999999999999,
+    "passed": false,
+    "issues_count": 0
+  },
+  "timestamp": "2025-12-21T01:05:49.963296",
+  "platform": "win32"
+}

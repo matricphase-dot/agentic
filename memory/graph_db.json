@@ -1,0 +1,162 @@
+{
+  "workflows": [
+    {
+      "id": "test_wf_123",
+      "type": "Workflow",
+      "task": "Test Python package versions",
+      "status": "completed",
+      "steps_count": 3,
+      "created_at": "2025-12-19T00:23:42.152025",
+      "completed_at": "2025-12-19T00:23:42.152035",
+      "execution_time": "1.5s",
+      "node_id": "workflow_1"
+    },
+    {
+      "id": "integration_test_001",
+      "type": "Workflow",
+      "task": "Full system integration test",
+      "status": "completed",
+      "steps_count": 3,
+      "created_at": "2025-12-19T00:23:53.534799",
+      "completed_at": null,
+      "execution_time": "0s",
+      "node_id": "workflow_2"
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "artifact_2d8d8b13",
+      "type": "Artifact",
+      "workflow_id": "test_wf_123",
+      "step_number": 1,
+      "step_name": "Research",
+      "step_description": "Check PyPI for versions",
+      "status": "completed",
+      "timestamp": "2025-12-19T00:23:42.152156",
+      "node_id": "artifact_1"
+    },
+    {
+      "id": "artifact_51514e4d",
+      "type": "Artifact",
+      "workflow_id": "test_wf_123",
+      "step_number": 2,
+      "step_name": "Compare",
+      "step_description": "Compare version numbers",
+      "status": "completed",
+      "timestamp": "2025-12-19T00:23:42.152221",
+      "node_id": "artifact_2"
+    },
+    {
+      "id": "artifact_7417a4a2",
+      "type": "Artifact",
+      "workflow_id": "test_wf_123",
+      "step_number": 3,
+      "step_name": "Report",
+      "step_description": "Generate summary",
+      "status": "completed",
+      "timestamp": "2025-12-19T00:23:42.152281",
+      "node_id": "artifact_3"
+    },
+    {
+      "id": "artifact_fdfdad73",
+      "type": "Artifact",
+      "workflow_id": "integration_test_001",
+      "step_number": 1,
+      "step_name": "Memory",
+      "step_description": "Save to graph memory",
+      "status": "completed",
+      "timestamp": "2025-12-19T00:23:53.534853",
+      "node_id": "artifact_4"
+    },
+    {
+      "id": "artifact_09201a5d",
+      "type": "Artifact",
+      "workflow_id": "integration_test_001",
+      "step_number": 2,
+      "step_name": "QA",
+      "step_description": "Verify results",
+      "status": "completed",
+      "timestamp": "2025-12-19T00:23:53.534902",
+      "node_id": "artifact_5"
+    },
+    {
+      "id": "artifact_e24f3afa",
+      "type": "Artifact",
+      "workflow_id": "integration_test_001",
+      "step_number": 3,
+      "step_name": "Report",
+      "step_description": "Generate test report",
+      "status": "completed",
+      "timestamp": "2025-12-19T00:23:53.534947",
+      "node_id": "artifact_6"
+    }
+  ],
+  "agents": [],
+  "relationships": [
+    {
+      "id": "rel_7f5efcb7",
+      "from": "workflow_1",
+      "to": "artifact_1",
+      "type": "HAS_ARTIFACT",
+      "properties": {
+        "step": 1,
+        "relationship": "workflow_contains"
+      }
+    },
+    {
+      "id": "rel_0b1ed182",
+      "from": "workflow_1",
+      "to": "artifact_2",
+      "type": "HAS_ARTIFACT",
+      "properties": {
+        "step": 2,
+        "relationship": "workflow_contains"
+      }
+    },
+    {
+      "id": "rel_bfc25172",
+      "from": "workflow_1",
+      "to": "artifact_3",
+      "type": "HAS_ARTIFACT",
+      "properties": {
+        "step": 3,
+        "relationship": "workflow_contains"
+      }
+    },
+    {
+      "id": "rel_5f9ddf2f",
+      "from": "workflow_2",
+      "to": "artifact_4",
+      "type": "HAS_ARTIFACT",
+      "properties": {
+        "step": 1,
+        "relationship": "workflow_contains"
+      }
+    },
+    {
+      "id": "rel_3b1ae39f",
+      "from": "workflow_2",
+      "to": "artifact_5",
+      "type": "HAS_ARTIFACT",
+      "properties": {
+        "step": 2,
+        "relationship": "workflow_contains"
+      }
+    },
+    {
+      "id": "rel_f7cea490",
+      "from": "workflow_2",
+      "to": "artifact_6",
+      "type": "HAS_ARTIFACT",
+      "properties": {
+        "step": 3,
+        "relationship": "workflow_contains"
+      }
+    }
+  ],
+  "metadata": {
+    "created": "2025-12-19T00:23:42.150610",
+    "version": "1.0",
+    "description": "Agentic Core Graph Memory"
+  }
+}

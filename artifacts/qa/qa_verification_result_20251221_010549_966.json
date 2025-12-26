@@ -1,0 +1,52 @@
+{
+  "id": "qa_verification_result_20251221_010549_966",
+  "type": "verification_result",
+  "content": {
+    "task": "Test: Empty output",
+    "output_type": "str",
+    "verification_time": "2025-12-21T01:05:49.966720",
+    "rules_applied": [
+      {
+        "name": "format_verifier",
+        "description": "Verifies data format and structure",
+        "severity": "medium",
+        "score": 0.5
+      },
+      {
+        "name": "content_verifier",
+        "description": "Verifies content completeness and quality",
+        "severity": "high",
+        "score": 0.0
+      }
+    ],
+    "overall_score": 0.25,
+    "passed": false,
+    "detailed_results": {
+      "format_verifier": {
+        "passed": false,
+        "issues": [],
+        "suggestions": []
+      },
+      "content_verifier": {
+        "passed": false,
+        "issues": [
+          "Empty or whitespace-only content"
+        ],
+        "suggestions": []
+      }
+    },
+    "issues": [
+      "Empty or whitespace-only content"
+    ],
+    "suggestions": [],
+    "format_valid": true
+  },
+  "metadata": {
+    "task": "Test: Empty output",
+    "verification_score": 0.25,
+    "passed": false,
+    "issues_count": 1
+  },
+  "timestamp": "2025-12-21T01:05:49.966941",
+  "platform": "win32"
+}

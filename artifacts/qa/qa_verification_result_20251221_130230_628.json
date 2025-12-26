@@ -1,0 +1,48 @@
+{
+  "id": "qa_verification_result_20251221_130230_628",
+  "type": "verification_result",
+  "content": {
+    "task": "Verify code execution",
+    "output_type": "str",
+    "verification_time": "2025-12-21T13:02:30.627902",
+    "rules_applied": [
+      {
+        "name": "format_verifier",
+        "description": "Verifies data format and structure",
+        "severity": "medium",
+        "score": 0.5
+      },
+      {
+        "name": "content_verifier",
+        "description": "Verifies content completeness and quality",
+        "severity": "high",
+        "score": 0.5
+      }
+    ],
+    "overall_score": 0.5,
+    "passed": false,
+    "detailed_results": {
+      "format_verifier": {
+        "passed": false,
+        "issues": [],
+        "suggestions": []
+      },
+      "content_verifier": {
+        "passed": false,
+        "issues": [],
+        "suggestions": []
+      }
+    },
+    "issues": [],
+    "suggestions": [],
+    "format_valid": true
+  },
+  "metadata": {
+    "task": "Verify code execution",
+    "verification_score": 0.5,
+    "passed": false,
+    "issues_count": 0
+  },
+  "timestamp": "2025-12-21T13:02:30.628125",
+  "platform": "win32"
+}
