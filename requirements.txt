@@ -11,11 +11,13 @@ google-auth==2.41.1
 google-auth-oauthlib==1.2.3
 greenlet==3.3.0
 gspread==6.2.1
+gunicorn==23.0.0
 idna==3.11
 itsdangerous==2.2.0
 Jinja2==3.1.6
 MarkupSafe==3.0.3
 oauthlib==3.3.1
+packaging==25.0
 pyasn1==0.6.1
 pyasn1_modules==0.4.2
 requests==2.32.5
