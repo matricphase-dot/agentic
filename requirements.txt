@@ -1,34 +1,29 @@
-# Create a new requirements.txt with compatible versions
-cat > requirements_fixed.txt << 'EOF'
-# Core dependencies
-google-generativeai>=0.3.0
-chromadb>=0.4.18
-neo4j>=5.14.0
-python-dotenv>=1.0.0
-
-# LangChain/LangGraph with compatible versions
-langchain==0.0.353  # Stable version without breaking changes
-langchain-core==0.1.0
-langchain-community==0.0.10
-langgraph==0.0.47  # Compatible version
-
-# Execution & Utilities
-docker>=6.0.0
-astunparse>=1.6.3
-requests>=2.28.0
-beautifulsoup4>=4.11.0
-lxml>=4.9.0
-
-# Testing
-pytest>=7.4.0
-pytest-asyncio>=0.21.0
-
-# Optional (for web scraping)
-selenium>=4.10.0
-playwright>=1.35.0
-
-# Optional (for code analysis)
-bandit>=1.7.5
-pylint>=2.17.0
-EOF 
-gunicorn
+APScheduler==3.11.2
+blinker==1.9.0
+cachetools==6.2.4
+certifi==2025.11.12
+charset-normalizer==3.4.4
+click==8.3.1
+colorama==0.4.6
+Flask==3.1.2
+Flask-SQLAlchemy==3.1.1
+google-auth==2.41.1
+google-auth-oauthlib==1.2.3
+greenlet==3.3.0
+gspread==6.2.1
+idna==3.11
+itsdangerous==2.2.0
+Jinja2==3.1.6
+MarkupSafe==3.0.3
+oauthlib==3.3.1
+pyasn1==0.6.1
+pyasn1_modules==0.4.2
+requests==2.32.5
+requests-oauthlib==2.0.0
+rsa==4.9.1
+SQLAlchemy==2.0.45
+typing_extensions==4.15.0
+tzdata==2025.3
+tzlocal==5.3.1
+urllib3==2.6.2
+Werkzeug==3.1.4
