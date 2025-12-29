@@ -1689,3 +1689,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 from waitlist import waitlist_bp
 app.register_blueprint(waitlist_bp, name='waitlist_page')
+# Waitlist functionality
+from waitlist import waitlist_bp
+app.register_blueprint(waitlist_bp, name='waitlist_new')
