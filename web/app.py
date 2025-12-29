@@ -1673,3 +1673,25 @@ if __name__ == "__main__":
     use_reloader=False,
 )
 
+@app.route('/waitlist', methods=['GET', 'POST'])
+def waitlist():
+    if request.method == 'POST':
+        email = request.form['email']
+        try:
+            existing = Waitlist.query.filter_by(email=email).first()
+            if existing:
+                flash('Already on waitlist!', 'warning')
+            else:
+                new_entry = Waitlist(email=email)
+                db.session.add(new_entry)
+                db.session.commit()
+                flash('Joined waitlist! ??', 'success')
+            return redirect('/waitlist')
+        except:
+            flash('Error joining waitlist', 'error')
+            return redirect('/waitlist')
+    return render_template('waitlist.html')
+class Waitlist(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+    created_at = db.Column(db.DateTime, default=db.func.current_timestamp())
