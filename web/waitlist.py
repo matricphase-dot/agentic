@@ -1,7 +1,7 @@
 from flask import Blueprint, request, flash, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
-waitlist_bp = Blueprint('waitlist', __name__)
-db = SQLAlchemy()
+from app import db
+waitlist_bp = Blueprint('waitlist_page', __name__)  # Changed name
 class Waitlist(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(120), unique=True, nullable=False)
@@ -17,5 +17,5 @@ def waitlist():
             db.session.add(new_entry)
             db.session.commit()
             flash('Joined waitlist! ??', 'success')
-        return redirect(url_for('waitlist.waitlist'))
+        return redirect(url_for('waitlist_page.waitlist'))
     return render_template('waitlist.html')
