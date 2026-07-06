@@ -1,12 +1,9 @@
-# Production Dependencies for Agentic Workflow Engine
-flask==2.3.3
-flask-cors==4.0.0
-pyautogui==0.9.54
-opencv-python==4.8.1.78
-numpy==1.24.3
-pandas==2.0.3
-Pillow==10.0.0
-SpeechRecognition==3.10.0
-pyttsx3==2.90
-requests==2.31.0
-sqlite3
+flask==3.1.2
+flask-sqlalchemy==3.1.1
+flask-login==0.6.3
+requests==2.32.5
+redis==5.0.1
+python-dotenv==1.0.1
+gunicorn==23.0.0
+playwright==1.44.0
+openai==1.40.0
